@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ * FCKeditor - The text editor for Internet - http://www.fckeditor.net
+ * Copyright (C) 2003-2010 Frederico Caldeira Knabben
+ *
+ * == BEGIN LICENSE ==
+ *
+ * Licensed under the terms of any of the following licenses at your
+ * choice:
+ *
+ *  - GNU General Public License Version 2 or later (the "GPL")
+ *    http://www.gnu.org/licenses/gpl.html
+ *
+ *  - GNU Lesser General Public License Version 2.1 or later (the "LGPL")
+ *    http://www.gnu.org/licenses/lgpl.html
+ *
+ *  - Mozilla Public License Version 1.1 or later (the "MPL")
+ *    http://www.mozilla.org/MPL/MPL-1.1.html
+ *
+ * == END LICENSE ==
+ *
+ * This is the sample templates definitions file. It makes the "templates"
+ * command completely customizable.
+ *
+ * See FCKConfig.TemplatesXmlPath in the configuration file.
+ *
+ * Sample: 
+ *
+ * <Template title="Image and Title" image="template1.gif">
+ *		<Description>One main image with a title and text that surround the image.</Description>
+ *		<Html>
+ *			<![CDATA[
+ *				<img style="MARGIN-RIGHT: 10px" height="100" alt="" width="100" align="left"/>
+ *				<h3>Type the title here</h3>
+ *				Type the text here
+ *			]]>
+ *		</Html>
+ *	</Template>
+ *
+-->
+<Templates imagesBasePath="fck_template/images/">
+		
+	<!-- DIVIDERS -->
+	<Template title="Solid divider" image="tmpl-divider-solid.gif">
+		<Description>Inserts a solid divider</Description>
+		<Html>
+			<![CDATA[
+			<div class="divider dividerSolid">&nbsp;</div>
+			<p>&nbsp;</p>
+			]]>
+		</Html>
+	</Template>
+	
+	<Template title="Pattern divider" image="tmpl-divider-graphic.gif">
+		<Description>Inserts a pattern divider</Description>
+		<Html>
+			<![CDATA[
+			<div class="divider dividerPattern">&nbsp;</div>
+			<p>&nbsp;</p>
+			]]>
+		</Html>
+	</Template>
+	
+	<Template title="Lite divider" image="tmpl-divider-lite.gif">
+		<Description>Inserts a lite divider</Description>
+		<Html>
+			<![CDATA[
+			<div class="divider dividerLite">&nbsp;</div>
+			<p>&nbsp;</p>
+			]]>
+		</Html>
+	</Template>	
+	
+	<!-- SPECIALBOX -->
+	<Template title="Special Box (Highlight)" image="tmpl-box-highlight.gif">
+		<Description>Inserts a highlighted box</Description>
+		<Html>
+			<![CDATA[
+			<div class="specialBox">
+				<h4 class="title">[title]</h4>
+				<p>[detailed description]</p>
+				<ul>
+					<li><a href="">[item with link]</a></li>
+					<li>[item without link]</li>
+				</ul>
+			</div>
+			<p>&nbsp;</p>
+			]]>
+		</Html>
+	</Template>
+	
+	<Template title="Special Box (Download)" image="tmpl-box-dl.gif">
+		<Description>Inserts a highlighted download box</Description>
+		<Html>
+			<![CDATA[
+			<div class="specialBox specialBoxDownload">
+				<i class="icon icon-download">&nbsp;</i>
+				<p><a href="" target="_blank">[Insert your download item link here]</a></p>
+			</div>
+			<p>&nbsp;</p>
+			]]>
+		</Html>
+	</Template>
+	
+	<Template title="Special Box (Link)" image="tmpl-box-link.gif">
+		<Description>Inserts a highlighted link box</Description>
+		<Html>
+			<![CDATA[
+			<div class="specialBox specialBoxLink">
+				<i class="icon icon-external-link">&nbsp;</i>
+				<p><a href="" target="_blank">[Insert your external link here]</a></p>
+			</div>
+			<p>&nbsp;</p>
+			]]>
+		</Html>
+	</Template>
+	
+	<!-- TABLE -->
+	<Template title="Table (two-column)" image="tmpl-table-styled.gif">
+		<Description>Inserts a two-column table with table headings in default styles.</Description>
+		<Html>
+			<![CDATA[
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="styledTable">
+				<tr class="noBorder">
+					<th>[column 1 heading]</th>
+					<th>[column 2 heading]</th>
+				</tr>
+				<tr>
+					<td>[cell content]</td>
+					<td>[cell content]</td>
+				</tr>
+				<tr>
+					<td>[cell content]</td>
+					<td>[cell content]</td>
+				</tr>
+				<tr>
+					<td>[cell content]</td>
+					<td>[cell content]</td>
+				</tr>
+			</table>
+			<p>&nbsp;</p>
+			]]>
+		</Html>
+	</Template>
+	
+	<Template title="Table (Layout Mode)" image="tmpl-table-layout.gif">
+		<Description>Inserts a table with no borders, margins, cell-padding, or cell-spacing. Ideal for laying-out content.</Description>
+		<Html>
+			<![CDATA[
+			<table class="layoutMode">
+				<tr>
+					<td>[cell]</td>
+					<td>[cell]</td>
+				</tr>
+				<tr>
+					<td>[cell]</td>
+					<td>[cell]</td>
+				</tr>
+				<tr>
+					<td>[cell]</td>
+					<td>[cell]</td>
+				</tr>
+			</table>
+			<p>&nbsp;</p>
+			]]>
+		</Html>
+	</Template>
+
+</Templates>

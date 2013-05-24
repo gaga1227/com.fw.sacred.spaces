@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ * FCKeditor - The text editor for Internet - http://www.fckeditor.net
+ * Copyright (C) 2003-2010 Frederico Caldeira Knabben
+ *
+ * == BEGIN LICENSE ==
+ *
+ * Licensed under the terms of any of the following licenses at your
+ * choice:
+ *
+ *  - GNU General Public License Version 2 or later (the "GPL")
+ *    http://www.gnu.org/licenses/gpl.html
+ *
+ *  - GNU Lesser General Public License Version 2.1 or later (the "LGPL")
+ *    http://www.gnu.org/licenses/lgpl.html
+ *
+ *  - Mozilla Public License Version 1.1 or later (the "MPL")
+ *    http://www.mozilla.org/MPL/MPL-1.1.html
+ *
+ * == END LICENSE ==
+ *
+ * This is the sample style definitions file. It makes the styles combo
+ * completely customizable.
+ *
+ * See FCKConfig.StylesXmlPath in the configuration file.
+-->
+<Styles>
+
+	<!-- CUSTOM TEXT STYLES -->
+	<Style name="Leader Text" element="p">
+		<Attribute name="class" value="leaderText" />
+	</Style>
+	<Style name="Highlighted Text" element="span">
+		<Attribute name="class" value="inlineTextHighlight" />
+	</Style>
+	<Style name="Citation" element="span">
+		<Attribute name="class" value="cite" />
+	</Style>	
+	<Style name="Quote" element="span">
+		<Attribute name="class" value="quote" />
+	</Style>
+	<Style name="Reference" element="span">
+		<Attribute name="class" value="reference" />
+	</Style>
+	<Style name="Notes" element="span">
+		<Attribute name="class" value="note" />
+	</Style>
+	
+	<!-- DEFAULT TEXT STYLES -->
+	<Style name="Discreet Text" element="span">
+		<Attribute name="class" value="discreetText" />
+	</Style>
+	<Style name="Upsized Text" element="span">
+		<Attribute name="class" value="upSizedText" />
+	</Style>
+	<Style name="Assistance Link" element="a">
+		<Attribute name="class" value="inlineAssistanceXref" />
+	</Style>
+	
+	<!-- IMAGE STYLES -->
+	<Style name="Image (Left Aligned)" element="img">
+		<Attribute name="class" value="leftAligned" />
+	</Style>
+	<Style name="Image (Right Aligned)" element="img">
+		<Attribute name="class" value="rightAligned" />
+	</Style>
+	<Style name="Image (Full width)" element="img">
+		<Attribute name="class" value="fullWidthImage" />
+	</Style>
+	
+	<!--
+	<Style name="Bordered Image" element="img">
+		<Attribute name="class" value="borderedImage" />
+	</Style>
+	<Style name="Bordered Image (Left Aligned)" element="img">
+		<Attribute name="class" value="borderedImage leftAligned" />
+	</Style>
+	<Style name="Bordered Image (Right Aligned)" element="img">
+		<Attribute name="class" value="borderedImage rightAligned" />
+	</Style>
+	-->
+	
+</Styles>

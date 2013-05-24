@@ -1,0 +1,362 @@
+@charset "utf-8";
+
+/*	verticle-rhythm base value: 20px
+	-----------------------------------------------------------
+	apply to all content below leaderText
+	'line-height', 'height', 'outerHeight' should equal to 
+	an even multiply/division of the base value 
+	(e.g. 10px(0.5x), 20px(1x), 40px(2x), 60px(3x), so on... */
+
+
+/* ==========================================================================
+   IMPORTS
+   ========================================================================== */
+@import url("../../../private/_lib/css/core/content-viewport.css");
+@import url("content-viewport-img-layout.css");
+
+
+/* ==========================================================================
+   RESET
+   ========================================================================== */
+   
+/* elems */
+.contentViewport h1:first-child, .contentViewport h1.first-child,
+.contentViewport h2:first-child, .contentViewport h2.first-child,
+.contentViewport h3:first-child, .contentViewport h3.first-child,
+.contentViewport h4:first-child, .contentViewport h4.first-child,
+.contentViewport  p:first-child, .contentViewport  p.first-child,
+.contentViewport div:first-child, .contentViewport div.first-child,
+.contentViewport table:first-child, .contentViewport table.first-child { margin-top:0; }
+/* headings */
+.contentViewport h1:first-child, .contentViewport h1.first-child,
+.contentViewport h2:first-child, .contentViewport h2.first-child,
+.contentViewport h3:first-child, .contentViewport h3.first-child,
+.contentViewport h4:first-child, .contentViewport h4.first-child { padding-top:0; }
+/* text */
+body, .contentViewport { color:#444; font-family:'MuseoSansRounded',sans-serif; font-size:14px; font-weight:300; line-height:20px; }
+
+
+/* ==========================================================================
+   elem - HEADINGS and PARAGRAPH
+   ========================================================================== */
+
+.h1,
+.contentViewport h1	{ color:#222222; font-size:45px; line-height:50px; font-weight:500; font-style:normal; margin:0!important; padding: 0px 0px  0px 0px; }
+.contentViewport h2	{ color:#a98e60; font-size:25px; line-height:30px; font-weight:400; font-style:italic; margin:0!important; padding:10px 0px 10px 0px; }
+.contentViewport h3 { color:#222222; font-size:18px; line-height:20px; font-weight:500; font-style:normal; margin:0!important; padding:10px 0px 10px 0px; }  
+.contentViewport h4 { color:#444444; font-size:17px; line-height:20px; font-weight:500; font-style:normal; margin:0!important; padding:10px 0px 10px 0px; }  
+.contentViewport p  { color:#444444; font-size:14px; line-height:20px; font-weight:300; font-style:normal; margin:0!important; padding: 0px 0px 10px 0px; }
+
+/* headings - common */
+.h1,
+.contentViewport h1,
+.contentViewport h2,
+.contentViewport h3,
+.contentViewport h4 { position:static; overflow:hidden; } 
+
+/* headings - custom */
+.h1,
+.contentViewport h1	{ font-family:'Raleway',sans-serif; text-transform:uppercase; }
+.aside .h1, .aside h1 { padding }
+.contentViewport h2 { font-family:'Gentium Book Basic',serif; }
+.contentViewport h3 { text-transform:uppercase; }
+
+/* themes h1 */
+.blockRed .contentViewport h1, .blockRed .h1,
+.blockGreen .contentViewport h1, .blockGreen .h1,
+.blockGold .contentViewport h1, .blockGold .h1 { color:#fff; }
+.blockDark .contentViewport h1, .blockDark .h1 { color:#cbb181; }
+
+/* themes h2 */
+.blockRed .contentViewport h2,
+.blockGreen .contentViewport h2,
+.blockDark .contentViewport h2 { color:#ceb78d; }
+.blockGold .contentViewport h2 { color:#d3c9b8; }
+
+/* themes h3 */
+.blockRed .contentViewport h3 	{ color:#d6bdc2; }
+.blockGreen .contentViewport h3 { color:#cbcfcb; }
+.blockGold .contentViewport h3	{ color:#e1dacc; }
+.blockDark .contentViewport h3 	{ color:#c5c5c5; }
+
+/* themes h4 */
+.blockRed .contentViewport h4 	{ color:#d6bdc2; }
+.blockGreen .contentViewport h4 { color:#cbcfcb; }
+.blockGold .contentViewport h4 	{ color:#e1dacc; }
+.blockDark .contentViewport h4 	{ color:#c5c5c5; }
+
+/* themes p */
+.blockRed .contentViewport p	{ color:#d6bdc2; }
+.blockGreen .contentViewport p	{ color:#cbcfcb; }
+.blockGold .contentViewport p	{ color:#e1dacc; }
+.blockDark .contentViewport p 	{ color:#c5c5c5; }
+
+
+/* ==========================================================================
+   elem - LINK
+   ========================================================================== */
+.contentViewport a { color:#444; text-decoration:underline; line-height:19px; }
+.contentViewport a:hover,
+.contentViewport a:focus,
+.contentViewport a:active { color:#444; text-decoration:underline; }
+
+/* themes */
+.blockRed .contentViewport a 	{ color:#d6bdc2; }
+.blockGreen .contentViewport a 	{ color:#cbcfcb; }
+.blockGold .contentViewport a 	{ color:#e1dacc; }
+.blockDark .contentViewport a 	{ color:#c5c5c5; }
+
+
+/* ==========================================================================
+   elem - LIST
+   ========================================================================== */
+/*lv1(common) - list container*/
+.contentViewport ul,
+.contentViewport ol { margin:0px; padding:0 0 10px 0; list-style:none; }
+.contentViewport ol { margin-left:18px; list-style-type:decimal; list-style-position:outside; }
+/*lv1(common) - list item*/
+.contentViewport li { color:#444; font-size:14px; line-height:20px; margin:0 0 0 0; }
+/*lv1(common) - list item - verticle spacing*/
+.contentViewport li.first-child { margin-top:0; }
+.contentViewport li:first-child { margin-top:0; }
+/*lv1(common) - list item - bullet and spacing*/
+.contentViewport li { padding:0 0 0 18px; background:url(../../img/blt-list-lv1.png) 0px 6px no-repeat; }
+.contentViewport ol li { padding:0 0 0 0; background:none; }
+
+/*lv2(override) - list container*/
+.contentViewport ul ul,
+.contentViewport ul ol,
+.contentViewport ol ol,
+.contentViewport ol ul { padding:0 0 0 1px; }
+.contentViewport ol ol { list-style:lower-alpha; }
+/*lv2(override) - list item - verticle spacing*/
+.contentViewport li li.first-child { margin-top:0px; }
+.contentViewport li li:first-child { margin-top:0px; }
+/*lv2*(override) - list item - bullet and spacing*/
+.contentViewport li li { padding:0 0 0 18px; background:url(../../img/blt-list-lv2.png) 0px 7px no-repeat; }
+.contentViewport li ol li { padding:0 0 0 0; background:none; }
+
+/*ordered list extension(common)*/
+.contentViewport ol.listAlpha   { list-style:lower-alpha; }
+.contentViewport ol.listRoman   { list-style:lower-roman; }
+.contentViewport ol.listDecimal { list-style:decimal; }
+
+/*basic styles for old IE*/
+.ie7 .contentViewport ul { margin-left:16px; }
+.ie7 .contentViewport ol { margin-left:24px; }
+.ie7 .contentViewport ul li { list-style:disc; background:none; padding-left:6px; } 
+.ie7 .contentViewport ol li { list-style:decimal; }
+.ie7 .contentViewport ol ul li { list-style:disc; }
+.ie7 .contentViewport ol ol li { list-style:lower-alpha; } 
+.ie7 .contentViewport li ul { margin-left:16px; }
+.ie7 .contentViewport li ol { margin-left:23px; }
+.ie7 .contentViewport li ul li { padding-left:6px; }
+.ie7 .contentViewport li ol li { padding-left:0; }
+
+.ie6 .contentViewport ul { margin-left:16px; }
+.ie6 .contentViewport ol { margin-left:24px; }
+.ie6 .contentViewport ul li { list-style:disc; background:none; padding-left:6px; } 
+.ie6 .contentViewport ol li { list-style:decimal; }
+.ie6 .contentViewport ol ul li { list-style:disc; }
+.ie6 .contentViewport ol ol li { list-style:lower-alpha; } 
+.ie6 .contentViewport li ul { margin-left:16px; }
+.ie6 .contentViewport li ol { margin-left:23px; }
+.ie6 .contentViewport li ul li { padding-left:6px; }
+.ie6 .contentViewport li ol li { padding-left:0; }
+
+/* themes li */
+.blockRed .contentViewport li 	{ color:#d6bdc2; }
+.blockGreen .contentViewport li { color:#cbcfcb; }
+.blockGold .contentViewport li 	{ color:#e1dacc; }
+.blockDark .contentViewport li 	{ color:#c5c5c5; }
+
+
+/* ==========================================================================
+   style - LEADERTEXT
+   ========================================================================== */
+.leaderText,
+.contentViewport .leaderText { 
+	color:#a98e60; font-family:'Gentium Book Basic',serif; font-size:19px; line-height:22px; font-weight:400; font-style:italic; 
+	margin:0!important; padding:0px 0px 10px 0px; text-transform:none; }
+
+/* custom */
+.h1 .leaderText,
+.contentViewport h1 .leaderText { display:block; padding:0; font-size:22px; line-height:30px; }
+
+/* themes */
+.blockRed .leaderText, .blockRed .contentViewport .leaderText,
+.blockGreen .leaderText, .blockGreen .contentViewport .leaderText 	{ color:#ceb78d; }
+.blockDark .leaderText, .blockDark .contentViewport .leaderText 	{ color:#b0b0b0; }
+.blockGold .leaderText, .blockGold .contentViewport .leaderText 	{ color:#d3c9b8; }
+
+
+/* ==========================================================================
+   style - TEXT
+   ========================================================================== */
+
+/* highlight text */ 
+.contentViewport .inlineTextHighlight { color:#fff; background:#ff0080; }
+
+/* title */
+.contentViewport li .title,
+.contentViewport p .title,
+.contentViewport a .title { font-size:15px; }
+
+
+/* ==========================================================================
+   cog - DIVIDER
+   ========================================================================== */
+.divider,
+.contentViewport .divider { 	
+	display:block; position:relative; width:100%; margin:0; padding:0; float:none; clear:both; overflow:hidden;
+	font-size:0px; line-height:0px; text-indent:-9999em; text-align:center; }
+
+/*extend divider*/
+.dividerDiamond, .contentViewport .dividerDiamond { 
+	height:20px; margin:0 0 10px 0;
+	background-image:url(../../img/sprite-divider-diamond.png); background-repeat:no-repeat; background-position:center 0; }
+.aside .dividerDiamond, .aside .contentViewport .dividerDiamond { margin:5px 0 25px 0; }
+
+/* themes */
+.blockRed .dividerDiamond,
+.blockGreen .dividerDiamond	{ background-position:center -20px; }
+.blockDark .dividerDiamond	{ background-position:center -40px; }
+.blockGold .dividerDiamond 	{ background-position:center -60px; }
+
+	/* line */
+	.dividerDiamond .line { 
+		display:block; position:absolute; top:9px; left:0; width:100%; height:0; line-height:0;
+		border-top:1px solid #a98e60; }
+		
+	/* themes */
+	.blockRed .dividerDiamond .line,
+	.blockGreen .dividerDiamond .line	{ border-top-color:#ceb78d; }
+	.blockDark .dividerDiamond .line	{ border-top-color:#b0b0b0; }
+	.blockGold .dividerDiamond .line	{ border-top-color:#d3c9b8; }
+
+
+/* ==========================================================================
+   cog - SPECIALBOX
+   ========================================================================== */
+.contentViewport .specialBox {
+	display:block; position:relative; width:auto; height:auto; margin:25px 0 35px 0; padding:4px; overflow:hidden;
+	background:rgba(255,255,255,0.9); text-align:center; }
+.oldie .contentViewport .specialBox { background:#fff; }
+	
+	/* padder */
+	.contentViewport .specialBox .padder {
+		position:relative; width:auto; height:auto; margin:0; padding:10px 5% 0 5%; overflow:hidden;
+		border:1px solid #444; }
+		
+/* text */
+.contentViewport .specialBox,
+.contentViewport .specialBox h4,
+.contentViewport .specialBox p,
+.contentViewport .specialBox li,
+.contentViewport .specialBox a { color:#444; line-height:20px; text-decoration:none; }
+.contentViewport .specialBox a:hover,
+.contentViewport .specialBox a:focus,
+.contentViewport .specialBox a:active { text-decoration:underline; }
+
+/* theme - padder */
+.blockGreen .contentViewport .specialBox .padder 	{ border-color:#515d50; }
+.blockRed .contentViewport .specialBox .padder 		{ border-color:#721f33; }
+.blockGold .contentViewport .specialBox .padder 	{ border-color:#9c8156; }
+
+/* theme - text */
+.blockGreen .contentViewport .specialBox,
+.blockGreen .contentViewport .specialBox h4,
+.blockGreen .contentViewport .specialBox p,
+.blockGreen .contentViewport .specialBox li,
+.blockGreen .contentViewport .specialBox a { color:#515d50; }
+
+.blockRed .contentViewport .specialBox,
+.blockRed .contentViewport .specialBox h4,
+.blockRed .contentViewport .specialBox p,
+.blockRed .contentViewport .specialBox li,
+.blockRed .contentViewport .specialBox a { color:#721f33; }
+
+.blockGold .contentViewport .specialBox,
+.blockGold .contentViewport .specialBox h4,
+.blockGold .contentViewport .specialBox p,
+.blockGold .contentViewport .specialBox li,
+.blockGold .contentViewport .specialBox a { color:#9c8156; }
+
+
+/* ==========================================================================
+   cog - TABLE
+   ========================================================================== */
+
+/* tableHeader */
+.contentViewport .tableHeader { 
+	display:block; position:relative; width:auto; height:auto; margin:0!important; padding:3px!important; overflow:hidden;
+	color:#fff; border:1px solid #e5dac4; }
+.contentViewport .tableHeader .padder {
+	display:block; position:relative; width:auto; height:auto; margin:0; padding:13px 16px; overflow:hidden;
+	color:#fff; background:#ceb78b; line-height:19px; }
+.contentViewport .tableHeader .label { display:inline-block; font-size:19px; text-transform:uppercase; float:left; }
+.contentViewport .tableHeader .sublabel { display:inline-block; font-size:16px; text-transform:none; float:right; }
+
+/* tableHeader - extend */
+.contentViewport .tableHeader.overCap { width:100%; margin-left:-4px!important; }
+.contentViewport .tableHeader.compact .padder { padding:10px 15px 9px 15px; line-height:16px; }
+.contentViewport .tableHeader.compact .padder .label { font-size:16px; }
+
+/* styledTable */
+.contentViewport .styledTable {
+	display:table; width:100%; margin:0 0 30px 0;
+	color:#444; background:transparent;
+	font-size:16px; line-height:20px; }
+.contentViewport .styledTable b,
+.contentViewport .styledTable strong,
+.contentViewport .styledTable .bold { font-size:18px; }	
+.contentViewport .styledTable p { font-size:16px; line-height:20px;	padding:0 0 10px 0; }
+.contentViewport .styledTable p:last-child { padding-bottom:0; }
+.contentViewport .styledTable th,
+.contentViewport .styledTable td { text-align:left; border:0; padding:26px 0 8px 0;/*55-20(text)-1(border)*/ }
+.contentViewport .styledTable td { border-bottom:1px solid #999; }
+.contentViewport .styledTable tr.noBorder td { border:none; padding-bottom:10px; }
+.contentViewport .styledTable th,
+.contentViewport .styledTable th p { background:#ceb88c; color:#fff; font-size:19px; line-height:45px; }
+.contentViewport .styledTable th p { padding-bottom:0; }
+.contentViewport .styledTable a:hover { text-decoration:underline; cursor:pointer; }
+.contentViewport .styledTable td.highlight { background:#fff; }
+
+/* styledTable - extend */
+.contentViewport .styledTable.compact {	margin-top:10px; font-size:14px; }
+.contentViewport .styledTable.compact td { padding:15px 0 14px 0; }
+.contentViewport .styledTable.compact b,
+.contentViewport .styledTable.compact strong,
+.contentViewport .styledTable.compact .bold { font-size:16px; }	
+.contentViewport .styledTable.compact p { font-size:14px; }
+
+.contentViewport .styledTable.popup { margin:0; }
+.ie7 .contentViewport .styledTable.popup { width:90%; }
+.contentViewport .styledTable.popup,
+.contentViewport .styledTable.popup p { font-size:14px; }
+.contentViewport .styledTable.popup h3 { margin:0; padding:0; font-size:18px; line-height:25px; font-weight:700; text-transform:none; }	
+.contentViewport .styledTable.popup h4 { margin:0; padding:0; font-size:14px; line-height:20px; font-weight:700; }	
+.contentViewport .styledTable.popup td { padding:20px 0; border-bottom-color:#ceb88c; }
+.contentViewport .styledTable.popup tr:last-child td { border-bottom:none; padding-bottom:0; }
+
+/* theme */
+.blockGold .contentViewport .tableHeader { border-color:#bea779; } 
+.blockGold .contentViewport .styledTable th,
+.blockGold .contentViewport .styledTable th p,
+.blockGold .contentViewport .tableHeader .padder { background:#c5ad7c; }
+.blockGold .contentViewport .styledTable { color:#fff; }
+.blockGold .contentViewport .styledTable td { border-bottom-color:#bea779; }
+
+/* layoutMode */
+.contentViewport table.layoutMode { border-collapse:collapse; width:auto; color:#222; }
+.contentViewport table.layoutMode,
+.contentViewport table.layoutMode th,
+.contentViewport table.layoutMode td { margin:0; padding:0; }
+
+
+/* ==========================================================================
+   style - MISC
+   ========================================================================== */
+.contentViewport .clearer {	float:none; clear:both; height:0; line-height:0; overflow:hidden; visibility:hidden; }
+.contentViewport .interaction,
+.contentViewport .flashcontent { display:block; position:relative; margin:0 auto 20px auto; padding:0; overflow:hidden; }

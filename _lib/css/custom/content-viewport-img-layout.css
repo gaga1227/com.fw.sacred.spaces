@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* ------------------------------------------------------------------------------ */
+/* image object styles (for fckstyles.xml) */
+/* ------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------ */
+/* image styles */
+.contentViewport img.fullWidthImage 	{ display:block; width:100%; height:auto; margin:0 auto 20px auto; padding:0; overflow:hidden; }
+.contentViewport img.leftAligned		{ display:block; width:auto; max-width:45%; height:auto; float:left; margin:0 20px 10px 0; overflow:hidden; }
+.contentViewport img.rightAligned 		{ display:block; width:auto; max-width:45%; height:auto; float:right; margin:0 0 10px 20px; overflow:hidden; } 

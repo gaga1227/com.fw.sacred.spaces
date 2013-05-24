@@ -1,0 +1,240 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	color:#60696e;
+}
+
+.contentViewport {
+	clear:both;
+	position:relative; 
+	/* Was disabling the FCKEditor Scrollbars so users were unable to scroll to edit content. (Brenton)
+	overflow:hidden;
+	*/
+}
+
+.contentViewport.withRAContentIndex {float:left;}
+
+.contentViewport.withRAContentIndex .content {
+	float:left;
+	padding:0px 30px 0px 0px;
+	width:620px;
+}
+
+.contentViewport.withRAContentIndex .RAContentIndex {
+	float:left;
+	margin:20px 0px 0px 0px;
+	padding:0px;
+	width:250px;
+	background:url("../../img/content-viewport/racontentindex_bg.gif") repeat-y top left;
+	overflow:hidden;
+}
+
+.contentViewport.withRAContentIndex .RAContentIndex div.cappingTop {display:none;}
+.contentViewport.withRAContentIndex .RAContentIndex div.cappingBottom {height:70px;}
+.contentViewport.withRAContentIndex .RAContentIndex div.cappingTop {background-image:url("../../img/content-viewport/racontentindex_cappingtop.gif");}
+.contentViewport.withRAContentIndex .RAContentIndex div.cappingBottom {background-image:url("../../img/content-viewport/racontentindex_cappingbottom.gif");}
+
+.contentViewport.withRAContentIndex .RAContentIndex div.contentBody {
+	padding:0px 0px 0px 20px;
+	background:url("../../img/content-viewport/racontentindex_cappingtop.gif") no-repeat top left;
+	overflow:hidden;
+}
+
+.contentViewport h1:first-child,
+.contentViewport h2:first-child,
+.contentViewport p:first-child,
+.contentViewport div:first-child,
+.contentViewport table:first-child {margin-top:0.7em;}
+
+.contentViewport h1,
+.contentViewport .h1 {
+	margin:1em 0em 0.8em 0em;
+	font-size:2.2em;
+	font-weight:normal;	
+	color:#29251a;
+}
+
+.contentViewport h2,
+.contentViewport .h2 {
+	font-size:1.7em;
+	font-weight:normal;
+	line-height:1.3em;
+	color:#3c382f;
+}
+
+.contentViewport h1 + h2 {margin-top:0.3em;}
+
+.contentViewport .RAContentIndex h2 {margin:0.7em 0em 0.6em 0em;}
+
+.contentViewport h3,
+.contentViewport .h3 {
+	font-size:1.3em;
+	font-weight:normal;
+	line-height:1.4em;
+	color:#00adef;
+}
+
+.contentViewport h4,
+.contentViewport .h4 {
+	font-size:1.1em;
+	font-weight:normal;
+	font-style:italic;
+	color:#6b7c83;	
+}
+
+.contentViewport a {color:#ed145b;}
+
+.contentViewport a.inlineAssistanceXref {
+	padding:0px 0px 0px 13px;
+	background:url("../../img/widgets/inlineassistancexref.gif") no-repeat 0em 0.1em;
+}
+
+.contentViewport img.borderedImage {
+	padding:4px;
+	border:1px solid #c9d2db;
+	background-color:white;
+}
+
+.contentViewport img.leftAligned {
+	float:left;
+	margin:0px 20px 10px 0px;
+}
+
+.contentViewport img.rightAligned {
+	float:right;
+	margin:0px 0px 10px 20px;
+}
+
+.contentViewport table.layoutMode {	
+	margin:0px;
+	border-collapse:collapse;
+	width:auto;
+}
+
+.contentViewport table.layoutMode td {
+	margin:0px;
+	padding:0px;
+	border:none;
+}
+
+.contentViewport .inlineTextHighlight01 {color:#00aff0;}
+.contentViewport .noGuttering {margin:0px!important;}
+.contentViewport .discreetText {font-size:0.9em; color:#b0b0b0;}
+.contentViewport .upSizedText {font-size:1.5em;}
+
+.contentViewport div.decorativeDateDisplay {overflow:hidden;}
+
+.contentViewport div.decorativeDateDisplay p {
+	margin:0em!important;
+	line-height:1.2em;
+	text-align:center;
+	text-transform:uppercase;
+}
+
+.contentViewport div.decorativeDateDisplay p.dayMonth {font-size:1.7em;}
+
+.contentViewport div.decorativeDateDisplay p.year {font-size:1.5em;}
+
+.contentViewport ul.ltrListing {
+	float:left;
+	display:inline;
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+}
+
+.contentViewport ul.ltrListing li {
+	float:left;
+	display:inline;
+	margin:0px 0px 3px 0px;
+	padding:0px 10px 0px 11px;
+	border-left:1px dotted #848484; 
+	font-size:0.9em;
+	line-height:1.1em;
+	color:#9c9c9c;
+	text-align:left;
+}
+
+.contentViewport ul.ltrListing li:first-child {
+	padding-left:0px;
+	border-left:none;	
+}
+
+.contentViewport ul.ltrListing li a {color:#9c9c9c;}
+.contentViewport ul.ltrListing li a:hover {color:#60696e;}
+
+.contentViewport .RAContentIndex ul {
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+}
+
+.contentViewport .RAContentIndex li {
+	padding:0px 0px 10px 15px;
+	font-size:1.2em;
+	line-height:1.3em;
+	background:url("../../img/content-viewport/racontentindex_li_bg.gif") no-repeat 0px 6px;
+}
+
+.contentViewport .RAContentIndex li a {color:#60696e;}
+.contentViewport .RAContentIndex li a:hover {text-decoration:underline;}
+
+.contentViewport div.thumbedTileW90,
+.contentViewport div.thumbedTileW130 {
+	float:left;
+	display:inline;
+	margin:0px 8px 20px 8px;
+	padding-left:5px;
+	background-position:top left;
+	background-repeat:no-repeat;
+	overflow:hidden;	
+}
+
+.contentViewport div.thumbedTileW90 img,
+.contentViewport div.thumbedTileW130 img {
+	float:left;
+	display:inline;	
+}
+
+.contentViewport div.thumbedTileW90 p,
+.contentViewport div.thumbedTileW130 p {
+	margin-bottom:0.5em;
+	font-size:0.9em;
+	line-height:1.3em;
+	height:1.3em;
+	overflow:hidden;
+}
+
+.contentViewport div.thumbedTileW90 ul.ltrListing,
+.contentViewport div.thumbedTileW130 ul.ltrListing {
+	height:1.1em;
+	overflow:hidden;
+}
+
+.contentViewport div.thumbedTileW90 ul.ltrListing li,
+.contentViewport div.thumbedTileW130 ul.ltrListing li {white-space:nowrap;}
+
+.contentViewport div.thumbedTileW90 {
+	padding-top:75px;
+	width:85px;	
+	background-image:url("../../img/widgets/thumb_90x70_framed.gif");
+}
+
+.contentViewport div.thumbedTileW90 img {
+	margin-top:-70px!important;
+	width:80px;
+	height:60px;
+}
+
+.contentViewport div.thumbedTileW130 {
+	padding-top:105px;
+	width:125px;	
+	background-image:url("../../img/widgets/thumb_130x100_framed.gif");
+}
+
+.contentViewport div.thumbedTileW130 img {
+	margin-top:-100px!important;
+	width:120px;
+	height:90px;
+}

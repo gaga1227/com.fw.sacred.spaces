@@ -1,0 +1,93 @@
+/* ================================================================================================== */
+/* selectBox (adapted from original skin) */
+/* ================================================================================================== */
+
+/* ------------------------------------------------------------------------------ */
+/* selectBox-dropdown */
+.selectBox-dropdown,
+.selectBox-inline {
+	display:block!important; position:relative; width:100%; height:auto; margin:0; padding:12px 0; overflow:hidden;
+	color:#fff; background:#444; border:1px solid #5d5d5d;
+	font-family:'museoSansRounded',sans-serif; font-size:16px; font-weight:700; line-height:19px;
+	text-decoration:none!important; outline:none; cursor:pointer; }	
+
+/* ------------------------------------------------------------------------------ */
+/* Inline control (multi-select) */
+.selectBox-inline { padding:0; }
+
+/* focus */
+.selectBox-dropdown:focus,
+.selectBox-dropdown:focus .selectBox-arrow { outline:none; }
+
+/* open */
+.selectBox-dropdown.selectBox-menuShowing {	 }
+
+	/* ------------------------------------------------------------------------------ */
+	/* label */
+	.selectBox-dropdown .selectBox-label {
+		color:#fff; display:inline-block; padding:0 20px; overflow:hidden;
+		white-space:nowrap; text-overflow:ellipsis; }
+
+	/* ------------------------------------------------------------------------------ */
+	/* arrow */
+	.selectBox-dropdown .selectBox-arrow {
+		display:block; position:absolute; top:0; left:auto; right:0; width:40px; height:100%; margin:0; padding:0; overflow:hidden;
+		color:#fff; background:transparent; cursor:pointer;
+		font-size:28px; line-height:45px; text-align:center; }	
+
+/* ------------------------------------------------------------------------------ */
+/* Dropdown menu */
+.selectBox-dropdown-menu {
+	position:absolute; max-height:180px; min-height:1em; overflow:auto; z-index:99999;
+	background:#444; border:1px solid #666; border-top:none;
+	font-family:'museoSansRounded',sans-serif; }
+
+/* iOS touch scrolling, breaks on android */	
+.ios .selectBox-dropdown-menu { -webkit-overflow-scrolling:touch; }
+
+/* ------------------------------------------------------------------------------ */
+/* Options */
+.selectBox-options,
+.selectBox-options li,
+.selectBox-options li a {
+	display:block; margin:0; padding:0;
+	list-style:none;
+	cursor:default; }
+
+
+	/* ------------------------------------------------------------------------------ */
+	/* option item link */
+	.selectBox-options li a {
+		padding:13px 21px; overflow:hidden;
+		color:#fff; white-space:nowrap; text-overflow:ellipsis; cursor:pointer;
+		font-size:16px; font-weight:300; line-height:19px; }
+	
+	/* link hover */
+	.selectBox-options li.selectBox-hover a {
+		color:#fff; background:#af9a73; text-decoration:none; }
+	
+	/* link disabled */
+	.selectBox-options li.selectBox-disabled a { 
+		color:#ccc; background:none; cursor:not-allowed; }
+	
+	/* link selected */
+	.selectBox-options li.selectBox-selected a {
+		color:#fff; background:#666; cursor:default; }
+
+	/* ------------------------------------------------------------------------------ */
+	/* Options group */
+	.selectBox-options .selectBox-optgroup {
+		display:block; overflow:hidden;
+		color:#143795; background:#f2f2f2; white-space:nowrap; text-overflow:ellipsis;
+		font-size:16px; font-weight:bold; line-height:20px; }
+
+/* ------------------------------------------------------------------------------ */
+/* selectBox-dropdown - disabled */
+.selectBox.selectBox-disabled,
+.selectBox-inline.selectBox-disabled { color:#999!important; }
+.selectBox-dropdown.selectBox-disabled .selectBox-arrow {
+	/*opacity*/
+	opacity:0.5;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter:alpha(opacity=50); }
+.selectBox-inline.selectBox-disabled .selectBox-options a { background:none!important; }

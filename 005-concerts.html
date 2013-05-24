@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if lt IE 7]>		  <html class="no-js ie ie6 oldie" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
+<!--[if IE 7]>			  <html class="no-js ie ie7 oldie" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
+<!--[if IE 8]>			  <html class="no-js ie ie8 oldie" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
+<!--[if IE 9]>			  <html class="no-js ie ie9 newie" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
+<!--[if IE 10]>			  <html class="no-js ie ie10 newie" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
+<!--[if (gte IE 10)><!--> <html class="no-js" xmlns="http://www.w3.org/1999/xhtml"> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<!-- IE optimized -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<!-- Mobile viewport optimized -->
+<meta name="viewport" content="width=980,maximum-scale=1.0" />
+<!-- Title -->
+<title>Sacred Spaces Singleton - Concerts</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="apple-touch-icon-precomposed" href="http://192.168.17.127/Sacred_Spaces/svn/apple-touch-icon-precomposed.png" />
+<!-- CSS:FONTS -->
+<link type="text/css" rel="stylesheet" media="screen" href="_lib/font/museo-sans-rounded-webfont/font.css" /><!-- museo-sans-rounded -->
+<link type="text/css" rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Raleway:500|Gentium+Book+Basic:400italic" /><!-- google font -->
+<!-- CSS:ICONS -->
+<link type="text/css" rel="stylesheet" media="screen" href="_lib/icon/icon.css" />
+<!--[if IE 7 ]><link type="text/css" rel="stylesheet" media="screen" href="_lib/icon/icon.ie7.css" /><![endif]-->
+<!-- CSS:CORE -->
+<link type="text/css" rel="stylesheet" media="screen" href="_lib/css/normalize.css" /><!-- normalize -->
+<link type="text/css" rel="stylesheet" media="screen" href="_lib/css/common.css" /><!-- main -->
+<link type="text/css" rel="stylesheet" media="screen" href="_lib/css/custom/content-viewport.css" /><!-- content-viewport -->
+<link type="text/css" rel="stylesheet" media="print" href="_lib/css/print.css" /><!-- print -->
+<link type="text/css" rel="stylesheet" media="screen" href="_lib/js/fancyBox/jquery.fancybox.fw.css" /><!-- fancybox -->
+<!-- CSS:LIBS -->
+<!-- CSS:CUSTOM -->
+<style type="text/css">
+	/*insert code here*/		
+</style>
+<!-- JS:VENDOR -->
+<script type="text/javascript" src="_lib/js/modernizr.all.js"></script><!-- modernizr -->
+<script type="text/javascript" src="_lib/js/jquery-1.7.2.js"></script><!-- jQuery -->
+<!-- JS:LIBS -->
+<script type="text/javascript" src="_lib/js/jquery.hoverIntent.js"></script><!-- hoverIntent -->
+<script type="text/javascript" src="_lib/js/jquery.mobile.touch.js"></script><!-- touch gestures -->
+<script type="text/javascript" src="_lib/js/jquery.cycle.js"></script><!-- Cycle -->
+<script type="text/javascript" src="_lib/js/fancyBox/jquery.fancybox.js"></script><!-- fancybox -->
+<!--[if lt IE 9]><script type="text/javascript" src="_lib/js/css3pie/PIE.js"></script><![endif]--><!-- css3PIE -->
+<!-- JS:FW -->
+<script type="text/javascript" src="_lib/js/fw.utils.js"></script><!-- utils -->
+<script type="text/javascript" src="_lib/js/fw.widgets.js"></script><!-- widgets -->
+<script type="text/javascript" src="_lib/js/fw.media.js"></script><!-- media -->
+<script type="text/javascript" src="_lib/js/common.js"></script><!-- main -->
+<!-- JS:CUSTOM -->
+<script type="text/javascript">
+	/*insert code here*/
+</script>
+</head>
+
+<!-- BODY -->
+<body id="concerts">
+
+<!-- DEBUG -->
+<div id="debugInfo" class="nfp debug" data-on="" data-width=""></div>
+
+<!-- CONTAINER -->
+<div id="container">
+	
+	<!-- HEADER -->
+	<div id="header">
+		<div class="padder">
+			
+			<!-- BRAND -->
+			<div class="brand">
+				<a href="___samples/000-home.html">
+					<img src="_lib/img/img-brand.png" width="260" height="60" alt="Sacred Spaces Singleton" />
+				</a>
+			</div><!-- /BRAND -->
+			
+			<!-- NAV -->
+			<div id="nav" class="nfp">
+				<div id="navItems"><!--
+				--><a id="nav1" class="navItem css3pie" href="___samples/001-about.html"><span class="label">About</span></a><!--
+				--><span class="sep"><span class="bg"></span></span><!--
+				--><a id="nav2" class="navItem css3pie" href="___samples/002-tours.html"><span class="label">Tours</span></a><!--
+				--><span class="sep"><span class="bg"></span></span><!--
+				--><a id="nav3" class="navItem css3pie" href="___samples/003-weddings.html"><span class="label">Weddings</span></a><!--
+				--><span class="sep"><span class="bg"></span></span><!--
+				--><a id="nav4" class="navItem css3pie" href="___samples/004-facilities.html"><span class="label">Facilities</span></a><!--
+				--><span class="sep"><span class="bg"></span></span><!--
+				--><a id="nav5" class="navItem css3pie selected" href="___samples/005-concerts.html"><span class="label">Concerts</span></a><!--
+				--><span class="sep"><span class="bg"></span></span><!--
+				--><a id="nav6" class="navItem css3pie" href="___samples/006-support.html"><span class="label">Support</span></a><!--
+				--><span class="sep"><span class="bg"></span></span><!--
+				--><a id="nav7" class="navItem css3pie" href="___samples/007-contact.html"><span class="label">Contact</span></a><!--
+				--></div>
+			</div><!-- /NAV -->
+			
+		</div>
+	</div><!-- /HEADER -->
+	
+	<!-- BANNER -->
+	<div id="banner" class="nfp">
+		<img class="bannerImg" src="_lib/img/img-banner-concerts.jpg" width="1536" height="435" border="0" alt="" />
+		<h1 class="headingBox">
+			<span class="padder">
+				<span class="label">Concerts</span>
+			</span>
+		</h1>
+	</div><!-- /BANNER -->	
+	
+	<!-- CONCERT -->
+	<div id="concert" class="block blockGold">
+		<div class="padder clearfix">
+			
+			<!-- ASIDE -->
+			<div class="aside">
+				<div class="contentViewport">
+					<h1><span class="leaderText">What's on at the</span> Convent</h1>
+					<div class="divider dividerDiamond"><div class="line">&nbsp;</div></div>
+					<p class="leaderText">A wonderful series of concerts has been organised for the annual Sacred Spaces Fine Music Concert Series, held at the stunning Sisters of Mercy Convent in Singleton. Put these dates in your diary!</p>
+				</div>
+			</div><!-- /ASIDE -->
+			
+			<!-- MAIN -->
+			<div class="main">
+				
+				<!-- COLFULL -->
+				<div class="col colFull">
+					<div class="contentViewport">
+						<h3 class="tableHeader overCap compact">
+							<span class="padder clearfix">
+								<span class="label">Sacred Spaces Fine Music Concert Series 2013</span>
+							</span>
+						</h3>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="styledTable compact">
+							<tr>
+								<td><b>Sunday 21 April &ndash; Duo Guivio</b><br />Giuseppe Zangari (Guitar) and Victoria Jacono-Gilmovich (Violin)</td>								
+							</tr>
+							<tr>
+								<td><b>Sunday 21 July at 2pm &ndash; 'A-cappella Heaven'</b><br />Sydney's premier female a-cappella ensemble, the Endeavour Harmony Chorus</td>
+							</tr>
+							<tr>
+								<td><b>Sunday 29 September at 2pm – 'From Russia With Song'</b><br />Lilija Sile (soprano), Robert Harris (viola) and Irina Klamka (piano)</td>
+							</tr>
+						</table>
+					</div>
+				</div><!-- /COLFULL -->
+				
+			</div><!-- /MAIN -->
+			
+		</div>
+	</div><!--/CONCERT -->
+
+	<!-- EVENTS -->
+	<div id="events" class="block blockLight">
+		<div class="bgLine bgLineTop"></div>
+		<div class="bgLine bgLineBtm bgLineSnap"></div>
+		<div class="padder clearfix">
+			
+			<!-- EVENT 1 -->
+			<div class="event fixed decobox contentViewport">
+				<div class="padder">
+					<div class="content deco acenter">
+						<p class="date">Sunday 21 April AT 2PM</p>
+						<h1>Duo<br />Guivio</h1>
+						<div class="divider dividerDiamond"><div class="line">&nbsp;</div></div>
+						<p class="title"><b>Giuseppe Zangari (Guitar) and Victoria <br />Jacono-Gilmovich (Violin)</b></p>
+						<p>An afternoon of delightful and eclectic works written and arranged for violin and guitar. It will feature a fusion of French, Italian and Latin classics, together with newly composed Australian compositions.</p>
+						<p>Info about the performers:<br />Giuseppe: <a href="http://www.giuseppezangari.com" target="_blank">www.giuseppezangari.com</a><br />Victoria: <a href="http://www.victoriaviolin.com.au" target="_blank">www.victoriaviolin.com.au</a></p>
+						<div><a class="btnBubble btnBubbleCompact css3pie" href="#"><span class="label">Program</span><i class="icon iconInline iconInlineRight icon-download-alt"></i></a><a class="btnBubble btnBubbleCompact css3pie last-child" href="#"><span class="label">Enquire now</span></a></div>
+					</div>	
+				</div>				
+			</div><!-- /EVENT 1 -->
+			
+			<!-- EVENT 2 -->
+			<div class="event eventAlt fixed decobox contentViewport">
+				<div class="padder">
+					<div class="content deco acenter">
+						<p class="date">Sunday 21 July at 2pm</p>
+						<h1>A-cappella<br />Heaven</h1>
+						<div class="divider dividerDiamond"><div class="line">&nbsp;</div></div>
+						<p class="title"><b>Sydney's premier female a-cappella <br />ensemble, the Endeavour Harmony Chorus</b></p>
+						<p>will present a concert in the Chapel called 'A-cappella Heaven'. Their repertoire includes modern ballads, old jazz standards, musical hits, 60's favourites, gospel, traditional, swing, blues and comedy. The women who make up this dynamic chorus come from all walks of life and all age groups and share a passion for singing and performing.</p>
+						<p>This concert will be one of the feature events of the Singleton Arts Festival.</p>
+						<p>Info about the performers: <a href="http://www.endeavourharmony.com" target="_blank">www.endeavourharmony.com</a></p>
+						<div><a class="btnBubble btnBubbleCompact css3pie last-child" href="#"><span class="label">Enquire now</span></a></div>
+					</div>	
+				</div>				
+			</div><!-- /EVENT 2 -->
+			
+			<!-- EVENT 3 -->
+			<div class="event fixed decobox contentViewport mgnBtm0">
+				<div class="padder">
+					<div class="content deco acenter">
+						<p class="date">Sunday 29 September at 2pm</p>
+						<h1>From Russia<br />With Song</h1>
+						<div class="divider dividerDiamond"><div class="line">&nbsp;</div></div>
+						<p class="title"><b>Lilija Sile (soprano), Robert Harris (viola) and Irina Klamka (piano)</b></p>
+						<p>Incorporating an afternoon of beautiful song and instrumental pieces from Russia.</p>
+						<p>Info about the performers:<br /><a href="http://www.aim.edu.au/about/teaching-staff.asp" target="_blank">www.aim.edu.au/about/teaching-staff.asp</a><br />Choose 'Classical Performance Teachers' and then the individual links to viola, voice and piano.</p>
+						<div><a class="btnBubble btnBubbleCompact css3pie last-child" href="#"><span class="label">Enquire now</span></a></div>
+					</div>	
+				</div>				
+			</div><!-- /EVENT 3 -->
+			
+			<!-- EVENT 4 -->
+			<div id="eventMore" class="event eventAlt fixed decobox contentViewport mgnBtm0">
+				<div class="padder">
+					<div class="content deco acenter">
+						<div class="center">
+							<p class="date">Sacred spaces also support</p>
+							<h1>Concerts held<br />in singleton<br />in 2013</h1>
+							<div class="divider dividerDiamond"><div class="line">&nbsp;</div></div>
+							<div><a id="btnConcerts" class="btnBubble btnBubbleCompact css3pie last-child mgnTop10" href="___samples/popup-concerts.html"><span class="label">Show concerts &nbsp;+</span></a></div>
+						</div>
+					</div>
+				</div>				
+			</div><!-- /EVENT 4 -->
+			
+		</div>
+	</div><!--/EVENTS -->	
+
+	<!-- DETAILS -->
+	<div id="details" class="block">
+		<div class="bgLine bgLineBtm bgLineSnap"></div>
+		<div class="padder clearfix">
+			
+			<!-- ASIDE -->
+			<div class="aside">
+				<div class="contentViewport">
+					<h1><span class="leaderText">Concert</span> Details</h1>
+					<div class="divider dividerDiamond"><div class="line">&nbsp;</div></div>
+					<p class="leaderText">The information provided here applies to all concerts held at the Sisters of Mercy Convent.</p>
+				</div>
+			</div><!-- /ASIDE -->
+			
+			<!-- MAIN -->
+			<div class="main">
+				
+				<!-- COLFULL -->
+				<div class="col colFull">
+					<div class="contentViewport">
+						<p><b>Location</b><br />Sacred Spaces - The Convent of Mercy, <br />30 Queen Street, Singleton NSW Australia, in the heart of the Hunter Valley</p>
+						<p><b>Tickets</b><br />for each concert include afternoon tea and are: $25 adults, $20 concession, $5 school students. Reservations are recommended to guarantee seating. Limited tickets are also available at the door from 1.15pm on the day of each concert.</p>
+						<p><b>Reserved seating &amp; Information</b><br />Sacred Spaces Office (open Monday to Thursdy mornings) Phone 6572 2398 or email <a href="mailto:sacredspaces@singmercy.org.au" target="_blank">sacredspaces@singmercy.org.au</a></p>
+						<p>If you would like to be on the Sacred Spaces Concerts mailing list, please send a message to <a href="mailto:sacredspaces@singmercy.org.au" target="_blank">sacredspaces@singmercy.org.au</a> or phone the Sacred Spaces Office.</p>
+						<p>We would also love to hear from you if you are interested in helping out at any of our concerts &ndash; eg setting up, selling tickets, ushering, baking or serving afternoon tea, packing away etc.</p>
+					</div>
+				</div><!-- /COLFULL -->
+				
+			</div><!-- /MAIN -->
+						
+		</div>
+	</div><!--/DETAILS -->
+	
+	<!-- PASTEVENTS -->
+	<div id="pastevents" class="block blockLight">
+		<div class="bgLine bgLineBtm"></div>
+		<div class="padder clearfix">
+			
+			<!-- ASIDE -->
+			<div class="aside">
+				<div class="contentViewport">
+					<h1><span class="leaderText">Past</span> Events</h1>
+					<div class="divider dividerDiamond"><div class="line">&nbsp;</div></div>
+				</div>
+			</div><!-- /ASIDE -->
+			
+			<!-- MAIN -->
+			<div class="main mainfull clearfix">
+				
+				<!-- EVENT 1 -->
+				<div class="eventPast decobox contentViewport">
+					<div class="padder">
+						<div class="content deco">
+							<h3 class="title">Dolor Sit Amet Magna</h3>
+							<p class="date">January 23, 2012</p>
+							<p class="desc">Tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orcir dui sagittis in condimentum.</p>
+							<a class="btnEvent btnText btnTextPlain nfp" href="___samples/popup-evt1.html"><span class="label">Read More +</span></a>
+						</div>	
+					</div>				
+				</div><!-- /EVENT 1 -->
+				
+				<!-- EVENT 2 -->
+				<div class="eventPast decobox contentViewport">
+					<div class="padder">
+						<div class="content deco">
+							<h3 class="title">Lorem Ipsum Dolor Sit Amet Magna Carta</h3>
+							<p class="date">January 23, 2012</p>
+							<p class="desc">Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orcir dui sagittis in condimentum.</p>
+							<a class="btnEvent btnText btnTextPlain nfp" href="___samples/popup-evt2.html"><span class="label">Read More +</span></a>
+						</div>	
+					</div>				
+				</div><!-- /EVENT 2 -->
+				
+				<!-- EVENT 3 -->
+				<div class="eventPast eventPastAlt decobox contentViewport">
+					<div class="padder">
+						<div class="content deco">
+							<h3 class="title">Dolor Sit Amet Magna</h3>
+							<p class="date">January 23, 2012</p>
+							<p class="desc">Tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orcir dui sagittis in condimentum.</p>
+							<a class="btnEvent btnText btnTextPlain nfp" href="___samples/popup-evt1.html"><span class="label">Read More +</span></a>
+						</div>	
+					</div>				
+				</div><!-- /EVENT 3 -->
+				
+				<div class="clearer"></div>
+				
+				<!-- EVENT 4 -->
+				<div class="eventPast decobox contentViewport">
+					<div class="padder">
+						<div class="content deco">
+							<h3 class="title">Lorem Ipsum Dolor Sit Amet Magna Carta</h3>
+							<p class="date">January 23, 2012</p>
+							<p class="desc">Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orcir dui sagittis in condimentum.</p>
+							<a class="btnEvent btnText btnTextPlain nfp" href="___samples/popup-evt2.html"><span class="label">Read More +</span></a>
+						</div>	
+					</div>				
+				</div><!-- /EVENT 4 -->
+				
+				<!-- EVENT 5 -->
+				<div class="eventPast decobox contentViewport">
+					<div class="padder">
+						<div class="content deco">
+							<h3 class="title">Dolor Sit Amet Magna</h3>
+							<p class="date">January 23, 2012</p>
+							<p class="desc">Tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orcir dui sagittis in condimentum.</p>
+							<a class="btnEvent btnText btnTextPlain nfp" href="___samples/popup-evt1.html"><span class="label">Read More +</span></a>
+						</div>	
+					</div>				
+				</div><!-- /EVENT 5 -->
+				
+				<!-- EVENT 6 -->
+				<div class="eventPast eventPastAlt decobox contentViewport">
+					<div class="padder">
+						<div class="content deco">
+							<h3 class="title">Lorem Ipsum Dolor Sit Amet Magna Carta</h3>
+							<p class="date">January 23, 2012</p>
+							<p class="desc">Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orcir dui sagittis in condimentum.</p>
+							<a class="btnEvent btnText btnTextPlain nfp" href="___samples/popup-evt2.html"><span class="label">Read More +</span></a>
+						</div>	
+					</div>
+				</div><!-- /EVENT 6 -->
+				
+				<div class="clearer"></div>
+				
+				<!-- CONTROL -->
+				<div class="control acenter nfp">
+					<a class="btnTextLite" href="#"><i class="icon iconInline iconInlineLeft icon-angle-left"></i><span class="label">Previous</span></a>
+					<span class="msg dispInlineBlock">Page 1 of 3</span>
+					<a class="btnTextLite" href="#"><span class="label">Previous</span><i class="icon iconInline iconInlineRight icon-angle-right"></i></a>
+				</div><!-- /CONTROL -->
+				
+			</div><!-- /MAIN -->
+						
+		</div>
+	</div><!--/PASTEVENTS -->
+		
+	<!-- FOOTER -->
+	<div id="footer" class="clearfix nfp">		
+				
+		<!-- FOOTERLINKS -->
+		<div id="footerLinks" class="listLinks clearfix"><!--
+			--><span class="first-child">&copy; Sisters of Mercy</span><!--
+			--><span class="sep">|</span><!--
+			--><span><a href="#">Terms of Use</a></span><!--
+			--><span id="btnFW"><a class="ir pngBg" href="http://www.fraynework.com.au" target="_blank"><strong>fraynework</strong>&nbsp;<em>enabled</em></a></span><!--
+		--></div><!-- /FOOTERLINKS -->
+		
+	</div><!-- /FOOTER -->
+
+</div><!-- /CONTAINER -->
+
+</body>
+</html>

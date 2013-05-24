@@ -1,0 +1,418 @@
+/*
+VideoJS Default Styles (http://videojs.com)
+Version 3.2.0
+
+Updates:
+- 20120419 JX
+  updated the skin section to fw default skin
+*/
+
+/*
+REQUIRED STYLES (be careful overriding)
+================================================================================ */
+/* When loading the player, the video tag is replaced with a DIV,
+   that will hold the video tag or object tag for other playback methods.
+   The div contains the video playback element (Flash or HTML5) and controls, and sets the width and height of the video.
+
+   ** If you want to add some kind of border/padding (e.g. a frame), or special positioning, use another containing element.
+   Otherwise you risk messing up control positioning and full window mode. **
+*/
+.video-js {
+  background-color: #000; position: relative; padding: 0;
+
+  /* Start with 10px for base font size so other dimensions can be em based and easily calculable. */
+  font-size: 10px;
+
+  /* Allow poster to be vertially aligned. */
+  vertical-align: middle;
+  /*  display: table-cell; */ /*This works in Safari but not Firefox.*/
+}
+
+/* Playback technology elements expand to the width/height of the containing div. <video> or <object> */
+.video-js .vjs-tech { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* Fix for Firefox 9 fullscreen (only if it is enabled). Not needed when checking fullScreenEnabled. */
+.video-js:-moz-full-screen { position: absolute; }
+
+/* Fullscreen Styles */
+body.vjs-full-window {
+  padding: 0; margin: 0;
+  height: 100%; overflow-y: auto; /* Fix for IE6 full-window. http://www.cssplay.co.uk/layouts/fixed.html */
+}
+.video-js.vjs-fullscreen {
+  position: fixed; overflow: hidden; z-index: 2000; left: 0; top: 0; bottom: 0; right: 0; width: 100% !important; height: 100% !important;
+  _position: absolute; /* IE6 Full-window (underscore hack) */
+}
+.video-js:-webkit-full-screen {
+  width: 100% !important; height: 100% !important;
+}
+
+/* Poster Styles */
+.vjs-poster {
+  margin: 0 auto; padding: 0; cursor: pointer;
+
+  /* Scale with the size of the player div. Works when poster is vertically shorter, but stretches when it's less wide. */
+  position: relative; width: 100%; max-height: 100%;
+}
+
+/* Text Track Styles */
+/* Overall track holder for both captions and subtitles */
+.video-js .vjs-text-track-display { text-align: center; position: absolute; bottom: 4em; left: 1em; right: 1em; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+/* Individual tracks */
+.video-js .vjs-text-track {
+  display: none; color: #fff; font-size: 1.4em; text-align: center; margin-bottom: 0.1em;
+  /* Transparent black background, or fallback to all black (IE6) */
+  background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.50);
+}
+.video-js .vjs-subtitles { color: #fff; }
+.video-js .vjs-captions { color: #fc6; }
+.vjs-tt-cue { display: block; }
+
+/* Fading sytles, used to fade control bar. */
+.vjs-fade-in {
+  visibility: visible !important; /* Needed to make sure things hide in older browsers too. */
+  opacity: 1 !important;
+
+  -webkit-transition: visibility 0s linear 0s, opacity 0.3s linear;
+  -moz-transition: visibility 0s linear 0s, opacity 0.3s linear;
+  -ms-transition: visibility 0s linear 0s, opacity 0.3s linear;
+  -o-transition: visibility 0s linear 0s, opacity 0.3s linear;
+  transition: visibility 0s linear 0s, opacity 0.3s linear;
+}
+.vjs-fade-out {  
+  visibility: hidden !important;
+  opacity: 0 !important;
+  
+  -webkit-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
+  -moz-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
+  -ms-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
+  -o-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
+  transition: visibility 0s linear 1.5s,opacity 1.5s linear;
+}
+
+/* FRAYNEWORK DEFAULT SKIN (override in another file to create new skins)
+================================================================================
+Instead of editing this file, I recommend creating your own skin CSS file to be included after this file,
+so you can upgrade to newer versions easier. You can remove all these styles by removing the 'vjs-default-skin' class from the tag. */
+
+/* The default control bar. Created by bar.js */
+.vjs-fw-skin .vjs-controls {
+  position: absolute;
+  bottom: 0; /* Distance from the bottom of the box/video. Keep 0. Use height to add more bottom margin. */
+  left: 0; right: 0; /* 100% width of div */
+  margin: 0; padding: 0; /* Controls are absolutely position, so no padding necessary */
+  height: 40px; /* Including any margin you want above or below control items */
+  color: #fff;
+  
+  /*bg*/
+  background: url('video-js.fw.png') 0 0 repeat-x;
+
+  /* Start hidden and with 0 opacity. Opacity is used to fade in modern browsers. */
+  /* Can't use display block to hide initially because widths of slider handles aren't calculated and avaialbe for positioning correctly. */
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* General styles for individual controls. */
+.vjs-fw-skin .vjs-control {
+  position: absolute; top:0;
+  text-align: center; margin: 0; padding: 0;
+  height: 40px; width: 50px; /*default value*/
+}
+.vjs-fw-skin .vjs-control div {
+  /*default background properties*/
+  background-image: url('video-js.fw.png');
+  background-color: #fff;
+  background-repeat: no-repeat;
+}
+/*themes*/
+.vjs-fw-skin .vjs-control:hover div,
+.vjs-fw-skin .vjs-control:focus div,
+.vjs-fw-skin .vjs-control:active div { background-color: #9a688d; }/*default*/
+
+.vjs-fw-skin .vjs-control:focus {
+  outline: 0;
+}
+
+/* Hide control text visually, but have it available for screenreaders: h5bp.com/v */
+.vjs-fw-skin .vjs-control-text { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+
+/* Play/Pause
+-------------------------------------------------------------------------------- */
+.vjs-fw-skin .vjs-play-control { left:0; width: 50px; cursor: pointer !important; }
+/* Play Icon */
+.vjs-fw-skin.vjs-paused .vjs-play-control div { width: 100%; height: 40px; background-position: 0px -40px; }
+.vjs-fw-skin.vjs-playing .vjs-play-control div { width: 100%; height: 40px; background-position: -50px -40px; }
+
+/* Rewind - not used in FW skin
+-------------------------------------------------------------------------------- */
+.vjs-fw-skin .vjs-rewind-control,
+.vjs-fw-skin .vjs-rewind-control div { display:none!important; }
+
+/* Volume/Mute
+-------------------------------------------------------------------------------- */
+.vjs-fw-skin .vjs-mute-control { right:50px; width: 50px; cursor: pointer !important; }
+.vjs-fw-skin .vjs-mute-control div { width: 100%; height: 40px; background-position: 0px -80px; }
+.vjs-fw-skin .vjs-mute-control.vjs-vol-0 div { background-position: -50px -80px; }
+.vjs-fw-skin .vjs-mute-control.vjs-vol-1 div,
+.vjs-fw-skin .vjs-mute-control.vjs-vol-2 div, 
+.vjs-fw-skin .vjs-mute-control.vjs-vol-3 div { background-position: 0px -80px; }
+
+/*not used in FW skin*/
+.vjs-fw-skin .vjs-volume-control, 
+.vjs-fw-skin .vjs-volume-bar, 
+.vjs-fw-skin .vjs-volume-level,
+.vjs-fw-skin .vjs-volume-handle { display:none!important; }
+
+/* Progress
+-------------------------------------------------------------------------------- */
+.vjs-fw-skin div.vjs-progress-control {
+  position: absolute;
+  left: 70px; right: 200px; /* Leave room for time displays and other buttons. */
+  height: 6px; width: auto;
+  top:18px;
+
+  /* CSS Gradient */
+  background: #333;
+  background: -moz-linear-gradient(top, #222, #333);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#222), to(#333));
+  background: -webkit-linear-gradient(top, #222, #333);
+  background: -o-linear-gradient(top, #333, #222);
+  background: -ms-linear-gradient(top, #333, #222);
+  background: linear-gradient(top, #333, #222);
+}
+.vjs-fw-skin div.vjs-progress-control div,
+.vjs-fw-skin div.vjs-progress-control:hover div,
+.vjs-fw-skin div.vjs-progress-control:focus div,
+.vjs-fw-skin div.vjs-progress-control:active div {
+  background:none;	
+}
+
+/* Box containing play and load progresses. Also acts as seek scrubber. */
+.vjs-fw-skin .vjs-progress-holder {
+  position: relative; cursor: pointer !important; /*overflow: hidden;*/
+  padding: 0; margin: 0; /* Placement within the progress control item */
+  height: 6px;
+  background:#000!important;/*progress slot bg*/
+}
+.vjs-fw-skin .vjs-progress-holder .vjs-play-progress,
+.vjs-fw-skin .vjs-progress-holder .vjs-load-progress { /* Progress Bars */
+  position: absolute; display: block; height: 6px; margin: 0; padding: 0;
+  left: 0; top: 0; /*Needed for IE6*/
+}
+
+/*themes*/
+.vjs-fw-skin .vjs-play-progress { /*default*/
+	background-color: #9a688d!important; 
+	background-image:url(video-js.fw.png)!important; 
+	background-position:0 -220px!important; 
+	background-repeat:repeat-x!important; }
+
+.vjs-fw-skin .vjs-load-progress,
+.vjs-fw-skin .vjs-load-progress:hover,
+.vjs-fw-skin .vjs-load-progress:focus,
+.vjs-fw-skin .vjs-load-progress:active {
+  background-color: #666666!important;
+}
+
+.vjs-fw-skin div.vjs-seek-handle {
+  position: absolute;
+  width: 10px; height: 10px; /* Match img pixles */
+  margin-top: -3px;
+  left: 0; top: 0; /*Needed for IE6*/
+  
+  /*bg*/
+  background: #d2d2d2!important;
+  background: -moz-linear-gradient(top, #fcfcfc, #c2c2bd)!important;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fcfcfc), to(#c2c2bd))!important;
+  background: -webkit-linear-gradient(top, #fcfcfc, #c2c2bd)!important;
+  background: -o-linear-gradient(top, #fcfcfc, #c2c2bd)!important;
+  background: -ms-linear-gradient(top, #fcfcfc, #c2c2bd)!important;
+  background: linear-gradient(top, #fcfcfc, #c2c2bd)!important;
+  /* CSS Curved Corners. Needed to make shadows curved. */
+  -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;
+  /* CSS Shadows */
+  -webkit-box-shadow: 0 0 0 4px rgba(255,255,255,0.3); -moz-box-shadow: 0 0 0 4px rgba(255,255,255,0.3); box-shadow: 0 0 0 4px rgba(255,255,255,0.3);
+  /*border*/
+  border:1px solid #e1e1d4;
+}
+.vjs-fw-skin div.vjs-seek-handle:hover,
+.vjs-fw-skin div.vjs-seek-handle:focus,
+.vjs-fw-skin div.vjs-seek-handle:active {
+  /*bg*/
+  background: #c2c2c2!important;
+  background: -moz-linear-gradient(top, #fcfcfc, #a2a2a2)!important;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fcfcfc), to(#a2a2a2))!important;
+  background: -webkit-linear-gradient(top, #fcfcfc, #a2a2a2)!important;
+  background: -o-linear-gradient(top, #fcfcfc, #a2a2a2)!important;
+  background: -ms-linear-gradient(top, #fcfcfc, #a2a2a2)!important;
+  background: linear-gradient(top, #fcfcfc, #a2a2a2)!important;
+}
+
+/* Time Display
+-------------------------------------------------------------------------------- */
+.vjs-fw-skin .vjs-time-controls {
+  position: absolute;
+  top: 16px;
+  height: 11px; width: 45px;
+  font-size: 11px; line-height: 11px; font-weight: normal; font-family: Helvetica, Arial, sans-serif;
+}
+.vjs-fw-skin .vjs-time-controls,
+.vjs-fw-skin .vjs-time-controls div,
+.vjs-fw-skin .vjs-time-controls:hover div,
+.vjs-fw-skin .vjs-time-controls:focus div,
+.vjs-fw-skin .vjs-time-controls:active div {
+  background:none!important;	
+}
+
+.vjs-fw-skin .vjs-current-time { right:150px; font-weight:bold; text-align:right; padding-right:5px;  }
+
+.vjs-fw-skin .vjs-duration {  right:95px; text-align:left; color:#999; }
+.vjs-fw-skin .vjs-remaining-time { display:none; }
+
+.vjs-time-divider { position: absolute; top: 16px; right:139px; width:10px; height:11px; }
+.vjs-time-divider,
+.vjs-time-divider div, 
+.vjs-time-divider span { display:block; width:10px; height:11px; line-height:11px; color:#999; }
+
+.vjs-fw-skin .vjs-time-control span { line-height: 11px; /* Centering vertically */ }
+
+/* Fullscreen
+-------------------------------------------------------------------------------- */
+.vjs-secondary-controls { /*float: right;*/ }
+
+.vjs-fw-skin .vjs-fullscreen-control { right:0; width: 50px; cursor: pointer !important; }
+.vjs-fw-skin .vjs-fullscreen-control div { width: 100%; height: 40px; background-position: -100px -80px; }
+
+.vjs-fw-skin.vjs-fullscreen .vjs-fullscreen-control div { background-position: -100px -80px; }
+
+
+/* Big Play Button (at start)
+---------------------------------------------------------*/
+.vjs-fw-skin .vjs-big-play-button {
+  display: block; /* Start hidden */ z-index: 2;
+  position: absolute; top: 50%; left: 50%; width: 100px; height: 100px; margin: -50px 0 0 -50px; text-align: center; vertical-align: center; cursor: pointer !important;
+  opacity: 0.95;
+  background:url('video-js.fw.png') 0 -120px no-repeat;
+}
+.vjs-fw-skin div.vjs-big-play-button span {
+  position: absolute; top: 50%; left: 50%;
+  display: block; width: 40px; height: 50px;
+  margin: -24px 0 0 -21px; /* Using negative margin to center image. */
+  background:#fff url('video-js.fw.png') -110px -120px no-repeat;
+}
+/*themes*/
+.vjs-fw-skin div.vjs-big-play-button:hover span,
+.vjs-fw-skin div.vjs-big-play-button:focus span,
+.vjs-fw-skin div.vjs-big-play-button:active span { background-color:#9a688d; }/*default*/
+
+/* Loading Spinner
+---------------------------------------------------------*/
+/* CSS Spinners by Kilian Valkhof - http://kilianvalkhof.com/2010/css-xhtml/css3-loading-spinners-without-images/ */
+.vjs-loading-spinner {
+  display: none;
+  position: absolute; top: 50%; left: 50%; width: 55px; height: 55px;
+  margin: -28px 0 0 -28px;
+  -webkit-animation-name: rotatethis;
+  -webkit-animation-duration:1s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+  -moz-animation-name: rotatethis;
+  -moz-animation-duration:1s;
+  -moz-animation-iteration-count:infinite;
+  -moz-animation-timing-function:linear;
+}
+
+@-webkit-keyframes rotatethis {
+  0% {-webkit-transform:scale(0.6) rotate(0deg); }
+  12.5% {-webkit-transform:scale(0.6) rotate(0deg); }
+  12.51% {-webkit-transform:scale(0.6) rotate(45deg); }
+  25% {-webkit-transform:scale(0.6) rotate(45deg); }
+  25.01% {-webkit-transform:scale(0.6) rotate(90deg);}
+  37.5% {-webkit-transform:scale(0.6) rotate(90deg);}
+  37.51% {-webkit-transform:scale(0.6) rotate(135deg);}
+  50% {-webkit-transform:scale(0.6) rotate(135deg);}
+  50.01% {-webkit-transform:scale(0.6) rotate(180deg);}
+  62.5% {-webkit-transform:scale(0.6) rotate(180deg);}
+  62.51% {-webkit-transform:scale(0.6) rotate(225deg);}
+  75% {-webkit-transform:scale(0.6) rotate(225deg);}
+  75.01% {-webkit-transform:scale(0.6) rotate(270deg);}
+  87.5% {-webkit-transform:scale(0.6) rotate(270deg);}
+  87.51% {-webkit-transform:scale(0.6) rotate(315deg);}
+  100% {-webkit-transform:scale(0.6) rotate(315deg);}
+}
+
+@-moz-keyframes rotatethis {
+  0% {-moz-transform:scale(0.6) rotate(0deg);}
+  12.5% {-moz-transform:scale(0.6) rotate(0deg);}
+  12.51% {-moz-transform:scale(0.6) rotate(45deg);}
+  25% {-moz-transform:scale(0.6) rotate(45deg);}
+  25.01% {-moz-transform:scale(0.6) rotate(90deg);}
+  37.5% {-moz-transform:scale(0.6) rotate(90deg);}
+  37.51% {-moz-transform:scale(0.6) rotate(135deg);}
+  50% {-moz-transform:scale(0.6) rotate(135deg);}
+  50.01% {-moz-transform:scale(0.6) rotate(180deg);}
+  62.5% {-moz-transform:scale(0.6) rotate(180deg);}
+  62.51% {-moz-transform:scale(0.6) rotate(225deg);}
+  75% {-moz-transform:scale(0.6) rotate(225deg);}
+  75.01% {-moz-transform:scale(0.6) rotate(270deg);}
+  87.5% {-moz-transform:scale(0.6) rotate(270deg);}
+  87.51% {-moz-transform:scale(0.6) rotate(315deg);}
+  100% {-moz-transform:scale(0.6) rotate(315deg);}
+}
+/* Each circle */
+div.vjs-loading-spinner .ball1 { opacity: 0.12; position:absolute; left: 20px; top: 0px; width: 13px; height: 13px; background: #fff;
+  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+
+div.vjs-loading-spinner .ball2 { opacity: 0.25; position:absolute; left: 34px; top: 6px; width: 13px; height: 13px; background: #fff;
+  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+
+div.vjs-loading-spinner .ball3 { opacity: 0.37; position:absolute; left: 40px; top: 20px; width: 13px; height: 13px; background: #fff;
+
+  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+
+div.vjs-loading-spinner .ball4 { opacity: 0.50; position:absolute; left: 34px; top: 34px; width: 13px; height: 13px; background: #fff;
+  border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 15px; border: 1px solid #ccc; }
+
+div.vjs-loading-spinner .ball5 { opacity: 0.62; position:absolute; left: 20px; top: 40px; width: 13px; height: 13px; background: #fff;
+  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+
+div.vjs-loading-spinner .ball6 { opacity: 0.75; position:absolute; left: 6px; top: 34px; width: 13px; height: 13px; background: #fff;
+  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+
+div.vjs-loading-spinner .ball7 { opacity: 0.87; position:absolute; left: 0px; top: 20px; width: 13px; height: 13px; background: #fff;
+  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+
+div.vjs-loading-spinner .ball8 { opacity: 1.00; position:absolute; left: 6px; top: 6px; width: 13px; height: 13px; background: #fff;
+  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+
+/* Menu Buttons (Captions/Subtitles/etc.) not used in fw skin
+-------------------------------------------------------------------------------- */
+.vjs-fw-skin .vjs-menu-button, 
+.vjs-fw-skin .vjs-menu-button div, 
+.vjs-fw-skin .vjs-menu-button ul,
+.vjs-fw-skin .vjs-menu-button li, 
+.vjs-fw-skin .vjs-menu-button:focus ul,
+.vjs-fw-skin .vjs-menu-button:hover ul { display:none!important; }
+
+/* Subtitles Button not used in fw skin */ 
+.vjs-fw-skin .vjs-captions-button div,
+.vjs-fw-skin .vjs-chapters-button div,
+.vjs-fw-skin .vjs-chapters-button ul { display:none!important; }
+
+
+/* ================================================================================================== */
+/* responsive
+/* ================================================================================================== */
+
+/* ------------------------------------------------------------------------------ */
+/* hide most UI for mobile */
+@media only screen and (max-width:640px) {
+	
+	/* hide controls */
+	.vjs-fw-skin .vjs-controls,
+	.vjs-fw-skin .vjs-control,
+	.vjs-fw-skin .vjs-time-divider { display:none!important; }	
+
+}

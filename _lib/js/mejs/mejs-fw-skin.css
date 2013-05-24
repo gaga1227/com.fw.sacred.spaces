@@ -1,0 +1,192 @@
+/* ------------------------------------------------------------------------------ */
+/* FW Player Default Skin */
+/* Author: JX 20130130 */
+
+/*container*/
+.mejs-container.mejs-fw {
+	width:auto!important; height:38px!important;/*40-2(border)*/ margin:0; padding:0;
+	color:#444; border:1px solid #fbfbfb; border-bottom-color:#b3b3b3;
+	/*background-gradient*/
+	background-color:#f2f2f2;
+	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.07)));
+	background-image:-webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.07) 100%);
+	background-image:-moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.07) 100%);
+	background-image:-o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.07) 100%);
+	background-image:linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.07) 100%);
+	-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000, endColorstr=#11FFFFFF);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000, endColorstr=#11FFFFFF);
+	zoom:1; }
+
+	/*layers*/
+	.mejs-fw .mejs-layers { 
+		display:none!important; }
+
+	/*controls*/
+	.mejs-fw .mejs-controls { 
+		height:38px; background:none; }
+		
+		/*common control containers*/
+		.mejs-fw .mejs-controls div { 
+			height:38px; float:none; }
+		
+		/*common button*/
+		.mejs-fw .mejs-controls button,
+		.mejs-fw .mejs-controls button:focus,
+		.mejs-fw .mejs-controls button:active { 
+			outline:0 none!important; }
+		
+		/*play/pause button*/
+		.mejs-fw .mejs-controls .mejs-playpause-button  {
+			position:absolute; top:0; left:0; width:44px;
+			border-right:1px solid #aaa;
+			/*box-shadow*/-webkit-box-shadow:1px 0px 0px 1px #fbfbfb; box-shadow:1px 0px 0px 0px #fbfbfb; }
+			
+			/*play*/
+			.mejs-fw .mejs-controls .mejs-playpause-button button {
+				width:20px; height:20px; top:50%; left:50%; margin:-10px 0 0 -10px; padding:0; overflow:hidden;
+				background-image:url(controls-fw.png); background-position:-20px 0; background-repeat:no-repeat; }
+			.mejs-fw .mejs-controls .mejs-playpause-button button:hover,
+			.mejs-fw .mejs-controls .mejs-playpause-button button:focus,
+			.mejs-fw .mejs-controls .mejs-playpause-button button:active { 
+				background-position:-20px -20px; }
+			
+			/*pause*/
+			.mejs-fw .mejs-controls .mejs-pause button  { 
+				background-position:0 0; }
+			.mejs-fw .mejs-controls .mejs-pause button:hover,
+			.mejs-fw .mejs-controls .mejs-pause button:focus,
+			.mejs-fw .mejs-controls .mejs-pause button:active { 
+				background-position:0 -20px; }
+		
+		/*volumn button*/
+		.mejs-fw .mejs-controls .mejs-volume-button  {
+			position:absolute; top:0; right:0; width:44px;
+			border-left:1px solid #aaa;
+			/*box-shadow*/-webkit-box-shadow:-1px 0px 0px 1px #fbfbfb; box-shadow:-1px 0px 0px 0px #fbfbfb; }
+		.mejs-fw.mejs-ios .mejs-controls .mejs-volume-button,
+		.mejs-fw.mejs-android .mejs-controls .mejs-volume-button {
+			display:none!important;	}
+			
+			/*common*/
+			.mejs-fw .mejs-controls .mejs-mute button,
+			.mejs-fw .mejs-controls .mejs-unmute button {
+				width:20px; height:20px; top:50%; left:50%; margin:-10px 0 0 -10px; padding:0; overflow:hidden;
+				background-image:url(controls-fw.png); background-repeat:no-repeat; }			
+			
+			/*mute*/
+			.mejs-fw .mejs-controls .mejs-mute button { 
+				background-position:-40px 0; }
+			.mejs-fw .mejs-controls .mejs-mute button:hover,
+			.mejs-fw .mejs-controls .mejs-mute button:focus,
+			.mejs-fw .mejs-controls .mejs-mute button:active { 
+				background-position:-40px -20px; }
+			
+			/*unmute*/
+			.mejs-fw .mejs-controls .mejs-unmute button { 
+				background-position:-60px 0; }
+			.mejs-fw .mejs-controls .mejs-unmute button:hover,
+			.mejs-fw .mejs-controls .mejs-unmute button:focus,
+			.mejs-fw .mejs-controls .mejs-unmute button:active { 
+				background-position:-60px -20px; }
+			
+		/*volumn slider*/
+		.mejs-fw .mejs-controls .mejs-horizontal-volume-slider { 
+			display:none!important; width:2px;/*float buffer*/ }
+			
+		/*time common*/
+		.mejs-fw .mejs-controls .mejs-time { 
+			position:absolute; top:0; width:55px; height:38px; margin:0; padding:0; }
+			
+			/*time text*/
+			.mejs-fw .mejs-controls .mejs-time span {
+				margin:0; float:none;
+				color:#444; text-shadow:0 1px 0 rgba(255,255,255,1);
+				font-size:14px; font-weight:bold; line-height:38px; }
+			
+			/*time button?*/
+			.mejs-fw .mejs-controls .mejs-time button { 
+				display:none!important; }
+				
+		/*currenttime*/
+		.mejs-fw .mejs-controls .mejs-currenttime-container { 
+			left:45px; right:auto; /*border-left:1px solid #fbfbfb;*/ }
+		
+		/*duration*/
+		.mejs-fw .mejs-controls .mejs-duration-container {	
+			left:auto; right:45px; /*border-right:1px solid #fbfbfb;*/ }
+		.mejs-fw.mejs-ios .mejs-controls .mejs-duration-container,
+		.mejs-fw.mejs-android .mejs-controls .mejs-duration-container {
+			right:0; }
+		
+		/*progress bar*/
+		.mejs-fw .mejs-controls .mejs-time-rail { 
+			width:auto!important; height:38px; margin:0 100px; padding:0; }
+		.mejs-fw.mejs-ios .mejs-controls .mejs-time-rail,
+		.mejs-fw.mejs-android .mejs-controls .mejs-time-rail {
+			margin-right:55px; }
+		
+			/*total*/
+			.mejs-fw .mejs-controls .mejs-time-rail .mejs-time-total {
+				margin:14px 10px;
+				background:#bbbbbb;
+				/*box-shadow*/-webkit-box-shadow:inset 0px -1px 1px 0px rgba(0,0,0,0.2); box-shadow:inset 0px -1px 1px 0px rgba(0,0,0,0.2); }
+			
+			/*loaded*/
+			.mejs-fw .mejs-controls .mejs-time-rail .mejs-time-loaded {	
+				background:#999; }
+			
+			/*current*/
+			.mejs-fw .mejs-controls .mejs-time-rail .mejs-time-current { 
+				/*background-gradient*/
+				background-color:#9a688d; /*default*/
+				background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.1)));
+				background-image:-webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+				background-image:-moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+				background-image:-o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+				background-image:linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+				-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000, endColorstr=#19000000);
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000, endColorstr=#19000000);
+				zoom:1; }
+			
+			/*handle*/
+			.mejs-fw .mejs-controls .mejs-time-rail .mejs-time-handle  {
+				display:block!important; top:-3px; width:16px; height:16px;
+				border:none;
+				/*border-radius*/-webkit-border-radius:50%; border-radius:50%;
+				/*background-clip*/-moz-background-clip:padding; -webkit-background-clip:padding-box; background-clip:padding-box;
+				/*box-shadow*/-webkit-box-shadow:0px 1px 3px 0px rgba(0,0,0,0.5); box-shadow:0px 1px 3px 0px rgba(0,0,0,0.5);
+				/*background-gradient*/
+				background-color:#fff;
+				background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.1)));
+				background-image:-webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+				background-image:-moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+				background-image:-o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+				background-image:linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%);
+				-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000, endColorstr=#19000000);
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000, endColorstr=#19000000);
+				zoom:1; }
+			.ie7 .mejs-fw .mejs-controls .mejs-time-rail .mejs-time-handle,
+			.ie8 .mejs-fw .mejs-controls .mejs-time-rail .mejs-time-handle,
+			.oldie .mejs-fw .mejs-controls .mejs-time-rail .mejs-time-handle { 
+				border:1px solid #999; width:14px; height:14px; }
+				
+			/*float*/
+			.mejs-fw .mejs-controls .mejs-time-float { 
+				top:-24px;  
+				color:#fbfbfb; background:#444; border:none; }
+			.ie7 .mejs-fw .mejs-controls .mejs-time-float,
+			.ie8 .mejs-fw .mejs-controls .mejs-time-float,
+			.oldie .mejs-fw .mejs-controls .mejs-time-float {
+				display:none!important; }
+				
+				/*current text*/
+				.mejs-fw .mejs-controls .mejs-time-float .mejs-time-float-current { 
+					height:13px; line-height:13px; }
+				
+				/*corner*/
+				.mejs-fw .mejs-controls .mejs-time-float .mejs-time-float-corner { 
+					border-color:#444 transparent transparent transparent;  }
+
+
+
+		

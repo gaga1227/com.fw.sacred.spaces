@@ -1,0 +1,26 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Team: Fraynework Limited
+	Email: contact[at]fraynework.com.au
+	From: Melbourne, Australia
+	
+	Project Director: Steve Darmody
+	Email: steve.darmody[at]fraynework.com.au
+	
+	Designer: Huw Jones
+	Email: huw.jones[at]fraynework.com.au
+	
+    Front-End Developer: Johnny Xu
+	Email: johnny.xu[at]fraynework.com.au
+	
+    Back-End Developer: Arthur Lipscombe
+	Email: arthur.lipscombe[at]fraynework.com.au
+	
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr

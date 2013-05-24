@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Print styles.
+   Author: JX 20120127 (Adapted from HTML5 Boilerplate 4)
+   ========================================================================== */
+@media print {
+    /* hidden elements */
+    #header, #nav, #sidenav, #banner, #megafooter, #footer,
+    .pagination, .slideshow, .interaction, .audioContainer, .videoContainer, .video,
+    .btnBox, .btnBg, .btnText, .btnGraphic, 
+    .icon, .shadow, .shade, .gradient,
+    .nfp { display:none!important; }
+
+    /* simplify printing styles */
+    * { color:#000!important; background:transparent!important; box-shadow:none!important; text-shadow:none!important; }
+
+    /* show link urls */
+    a, a:visited { text-decoration:underline; }
+    a[href]:after { content:" (" attr(href) ")"; }
+
+    /* show abbr titles */
+    abbr[title]:after { content:" (" attr(title) ")"; }
+
+    /* Don't show links for images, or javascript/internal links */
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after { content:""; }
+
+    /* misc content */
+    pre, blockquote { border:1px solid #999; page-break-inside:avoid; }
+    thead { display:table-header-group; /* h5bp.com/t */ }
+    tr, img { page-break-inside:avoid; }
+    img { max-width:100%!important; }
+    @page { margin: 0.5cm; }
+    p, h2, h3 { orphans:3; widows:3; }
+    h2, h3 { page-break-after:avoid; }
+}

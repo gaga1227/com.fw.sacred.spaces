@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* ================================================================================================== */
+/* slideshow */
+/* ================================================================================================== */
+
+/* ------------------------------------------------------------------------------ */
+/* container and common */
+.slideshow,
+.slideshow .slide { display:block; position:relative; width:100%!important; height:auto!important; overflow:hidden; background:#f5f5f5; }
+.slideshow { margin:0 auto 20px auto!important; padding:0 0 54%/*400/740*/ 0!important; }
+	
+	/* ------------------------------------------------------------------------------ */
+	/* slide */
+	.slideshow .slide { position:absolute; top:0!important; left:0!important; margin:0!important; padding:0!important; }
+		
+		/* ------------------------------------------------------------------------------ */
+		/* slide - image */
+		.slideshow .slide img { display:block; width:100%; height:auto; margin:0; padding:0; overflow:hidden; background:none; border:none; }
+
+/* ------------------------------------------------------------------------------ */
+/* toggle */
+.slideshow .btnToggle {	display:none!important; }
+
+/* ------------------------------------------------------------------------------ */
+/* slideshowControls */
+.slideshow .controls { position:absolute; bottom:0; right:0; width:80px; height:40px; margin:0; padding:0; overflow:hidden; z-index:20; }
+	
+	/* ------------------------------------------------------------------------------ */
+	/* prev | next */
+	.slideshow .btnPrev,
+	.slideshow .btnNext { 
+		display:block!important; position:absolute; top:0; left:0; width:40px; height:40px; margin:0; cursor:pointer; /*vertical-align:middle;*/
+		background-image:url(../img/slideshow-btn-nav.png); background-repeat:no-repeat; }
+	.slideshow .btnPrev { background-position:0 0; }
+	.slideshow .btnNext { background-position:0 -40px; left:auto; right:0; }
+	
+	/* interaction */
+	.slideshow .btnPrev:hover,
+	.slideshow .btnPrev:focus,
+	.slideshow .btnPrev:active { background-position:-40px 0; }
+	.slideshow .btnNext:hover,
+	.slideshow .btnNext:focus,
+	.slideshow .btnNext:active { background-position:-40px -40px; }
+	
+	/* disabled */
+	.slideshow .btnPrev.disabled,
+	.slideshow .btnNext.disabled { 
+		cursor:default!important;
+		/*opacity*/
+		opacity:0.5;
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+		filter:alpha(opacity=50); }
+	
+	/* remove bg in ie6, multiple classes CSS not supported */
+	.ie6 .slideshow .disabled { background:none!important; }
+		
+	/* IE7 display inline with text-indent fix */
+	.ie6 .slideshow .btnPrev,
+	.ie6 .slideshow .btnNext,
+	.ie7 .slideshow .btnPrev,
+	.ie7 .slideshow .btnNext { text-indent:0!important; }
+	.ie6 .slideshow .btnPrev span,
+	.ie6 .slideshow .btnNext span,
+	.ie7 .slideshow .btnPrev span,
+	.ie7 .slideshow .btnNext span { display:none!important; }
+	
+	/* ------------------------------------------------------------------------------ */
+	/* pager */
+	.slideshow .controls .pager { display:none!important; }
+	
+	/* ------------------------------------------------------------------------------ */
+	/* pager buttons */
+	
+/* ------------------------------------------------------------------------------ */
+/* caption */
+.slideshow .caption { 
+	display:none!important;
+	/* width:auto; height:auto; margin:0 90px 0 20px; padding:20px 0; overflow:hidden;
+	color:#2f2f2f; font-family:'OpenSansSemibold',sans-serif; font-size:15px; font-weight:normal; line-height:20px; */ }

@@ -1,0 +1,459 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if lt IE 7]>		  <html class="no-js ie ie6 oldie" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
+<!--[if IE 7]>			  <html class="no-js ie ie7 oldie" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
+<!--[if IE 8]>			  <html class="no-js ie ie8 oldie" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
+<!--[if IE 9]>			  <html class="no-js ie ie9 newie" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
+<!--[if IE 10]>			  <html class="no-js ie ie10 newie" xmlns="http://www.w3.org/1999/xhtml"> <![endif]-->
+<!--[if (gte IE 10)><!--> <html class="no-js" xmlns="http://www.w3.org/1999/xhtml"> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<!-- IE optimized -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<!-- Mobile viewport optimized -->
+<meta name="viewport" content="width=980,maximum-scale=1.0" />
+<!-- Title -->
+<title>Sacred Spaces Singleton - Facilities</title>
+<!-- Favicon -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="apple-touch-icon-precomposed" href="http://192.168.17.127/Sacred_Spaces/svn/apple-touch-icon-precomposed.png" />
+<!-- CSS:FONTS -->
+<link type="text/css" rel="stylesheet" media="screen" href="_lib/font/museo-sans-rounded-webfont/font.css" /><!-- museo-sans-rounded -->
+<link type="text/css" rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Raleway:500|Gentium+Book+Basic:400italic" /><!-- google font -->
+<!-- CSS:ICONS -->
+<link type="text/css" rel="stylesheet" media="screen" href="_lib/icon/icon.css" />
+<!--[if IE 7 ]><link type="text/css" rel="stylesheet" media="screen" href="_lib/icon/icon.ie7.css" /><![endif]-->
+<!-- CSS:CORE -->
+<link type="text/css" rel="stylesheet" media="screen" href="_lib/css/normalize.css" /><!-- normalize -->
+<link type="text/css" rel="stylesheet" media="screen" href="_lib/css/common.css" /><!-- main -->
+<link type="text/css" rel="stylesheet" media="screen" href="_lib/css/custom/content-viewport.css" /><!-- content-viewport -->
+<link type="text/css" rel="stylesheet" media="print" href="_lib/css/print.css" /><!-- print -->
+<!-- CSS:LIBS -->
+<link type="text/css" rel="stylesheet" media="screen" href="_lib/js/custom-form-elements/form.css" /><!-- custom-form-elements -->
+<link type="text/css" rel="stylesheet" media="screen" href="_lib/js/select-box/jquery.selectBox.fw.css" /><!-- select-box -->
+<link type="text/css" rel="stylesheet" media="screen" href="_lib/js/jqui/jquery-ui-1.10.1.datepicker.css" /><!-- datepicker -->
+<!-- CSS:CUSTOM -->
+<style type="text/css">
+	/*insert code here*/		
+</style>
+<!-- JS:VENDOR -->
+<script type="text/javascript" src="_lib/js/modernizr.all.js"></script><!-- modernizr -->
+<script type="text/javascript" src="_lib/js/jquery-1.7.2.js"></script><!-- jQuery -->
+<!-- JS:LIBS -->
+<script type="text/javascript" src="_lib/js/jquery.hoverIntent.js"></script><!-- hoverIntent -->
+<script type="text/javascript" src="_lib/js/jquery.mobile.touch.js"></script><!-- touch gestures -->
+<script type="text/javascript" src="_lib/js/jquery.cycle.js"></script><!-- Cycle -->
+<script type="text/javascript" src="_lib/js/custom-form-elements/custom-form-elements.js"></script><!-- custom-form-elements -->
+<script type="text/javascript" src="_lib/js/select-box/jquery.selectBox.js"></script><!-- select-box -->
+<script type="text/javascript" src="_lib/js/jqui/jquery-ui-1.10.1.datepicker.js"></script><!-- datepicker -->
+<!--[if lt IE 9]><script type="text/javascript" src="_lib/js/css3pie/PIE.js"></script><![endif]--><!-- css3PIE -->
+<!-- JS:FW -->
+<script type="text/javascript" src="_lib/js/fw.utils.js"></script><!-- utils -->
+<script type="text/javascript" src="_lib/js/fw.widgets.js"></script><!-- widgets -->
+<script type="text/javascript" src="_lib/js/fw.media.js"></script><!-- media -->
+<script type="text/javascript" src="_lib/js/common.js"></script><!-- main -->
+<!-- JS:CUSTOM -->
+<script type="text/javascript">
+	/*insert code here*/
+</script>
+</head>
+
+<!-- BODY -->
+<body id="facilities">
+
+<!-- DEBUG -->
+<div id="debugInfo" class="nfp debug" data-on="" data-width=""></div>
+
+<!-- CONTAINER -->
+<div id="container">
+	
+	<!-- HEADER -->
+	<div id="header">
+		<div class="padder">
+			
+			<!-- BRAND -->
+			<div class="brand">
+				<a href="___samples/000-home.html">
+					<img src="_lib/img/img-brand.png" width="260" height="60" alt="Sacred Spaces Singleton" />
+				</a>
+			</div><!-- /BRAND -->
+			
+			<!-- NAV -->
+			<div id="nav" class="nfp">
+				<div id="navItems"><!--
+				--><a id="nav1" class="navItem css3pie" href="___samples/001-about.html"><span class="label">About</span></a><!--
+				--><span class="sep"><span class="bg"></span></span><!--
+				--><a id="nav2" class="navItem css3pie" href="___samples/002-tours.html"><span class="label">Tours</span></a><!--
+				--><span class="sep"><span class="bg"></span></span><!--
+				--><a id="nav3" class="navItem css3pie" href="___samples/003-weddings.html"><span class="label">Weddings</span></a><!--
+				--><span class="sep"><span class="bg"></span></span><!--
+				--><a id="nav4" class="navItem css3pie selected" href="___samples/004-facilities.html"><span class="label">Facilities</span></a><!--
+				--><span class="sep"><span class="bg"></span></span><!--
+				--><a id="nav5" class="navItem css3pie" href="___samples/005-concerts.html"><span class="label">Concerts</span></a><!--
+				--><span class="sep"><span class="bg"></span></span><!--
+				--><a id="nav6" class="navItem css3pie" href="___samples/006-support.html"><span class="label">Support</span></a><!--
+				--><span class="sep"><span class="bg"></span></span><!--
+				--><a id="nav7" class="navItem css3pie" href="___samples/007-contact.html"><span class="label">Contact</span></a><!--
+				--></div>
+			</div><!-- /NAV -->
+			
+		</div>
+	</div><!-- /HEADER -->
+	
+	<!-- BANNER -->
+	<div id="banner" class="nfp">
+		<img class="bannerImg" src="_lib/img/img-banner-facilities.jpg" width="1536" height="435" border="0" alt="" />
+		<h1 class="headingBox">
+			<span class="padder">
+				<span class="label">Facilities</span>
+			</span>
+		</h1>
+	</div><!-- /BANNER -->	
+	
+	<!-- OCCASIONS -->
+	<div id="occasions" class="block blockRed">
+		<div class="padder clearfix">
+			
+			<!-- ASIDE -->
+			<div class="aside">
+				<div class="contentViewport">
+					<h1><span class="leaderText">Spaces for all</span> Occasions</h1>
+					<div class="divider dividerDiamond"><div class="line">&nbsp;</div></div>
+					<p class="leaderText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla.</p>
+				</div>
+			</div><!-- /ASIDE -->
+			
+			<!-- MAIN -->
+			<div class="main clearfix">
+				
+				<!-- COL2A -->
+				<div class="col col2 col2a">
+					<div class="contentViewport">
+						<p>Introduction to tours available. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+						<p>Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.</p>
+					</div>
+				</div><!-- /COL2A -->
+				
+				<!-- COL2B -->
+				<div class="col col2 col2b">
+					<div class="contentViewport">
+						<p>Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.</p>
+						<p><a class="btnBubble css3pie" href="#"><span class="label">Find out more</span></a></p>
+					</div>
+				</div><!-- /COL2B -->
+				
+			</div><!-- /MAIN -->
+			
+		</div>
+	</div><!--/OCCASIONS -->
+	
+	<!-- ROOMS1 -->
+	<div id="rooms1" class="block">
+		<div class="bgLine bgLineTop"></div>
+		<div class="bgLine bgLineBtm bgLineSnap"></div>
+		<div class="padder clearfix">
+			
+			<!-- FACILITY 1 -->
+			<div class="facility contentViewport">
+				<!-- INTRO -->
+				<div class="intro acenter">
+					<h1><span class="leaderText">The Convent</span> Reception Room</h1>
+					<div class="divider dividerDiamond"><div class="line">&nbsp;</div></div>
+					<p class="leaderText">Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
+					<p><a class="btnBubble css3pie" href="#"><span class="label">Enquire now</span></a></p>
+				</div>
+				
+				<!-- ABOUT -->
+				<div class="about acenter">
+					<img src="___samples/ph-450x250.gif" class="imgThumb" width="450" height="250" border="0" alt="" />
+					<h2>About the Convent Reception Room</h2>
+					<p>Carpeted floor, incandescent lighting. Containing heritage furniture and a baby grand piano. Large central tables suitable for dining. Austrian cane and wooden chairs, able to be supplemented with vinyl-covered chairs. Suitable for chamber-type concerts - audience up to 90. Suitable for cocktail party/dinner/luncheon. Limit 50 persons.</p>
+				</div>
+				
+				<!-- SPECS -->
+				<div class="specs">
+					<h3 class="tableHeader compact">
+						<span class="padder clearfix">
+							<span class="label">Specifications</span>
+						</span>
+					</h3>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="styledTable compact">
+						<tr>
+							<td><b>Cost</b> (per hour)</td>
+							<td class="aright"><b>$50</b> (Minimum charge $150)</td>
+						</tr>
+						<tr>
+							<td><b>Size</b></td>
+							<td class="aright"><b>40x50ft</b></td>
+						</tr>
+						<tr>
+							<td><b>Capacity</b> (adults)</td>
+							<td class="aright"><b>Up to 90 people</b></td>
+						</tr>
+					</table>
+				</div>				
+			</div><!-- /FACILITY 1 -->
+			
+			<!-- FACILITY 2 -->
+			<div class="facility facilityAlt contentViewport">
+				<!-- INTRO -->
+				<div class="intro acenter">
+					<h1><span class="leaderText">The Convent</span> Community Room</h1>
+					<div class="divider dividerDiamond"><div class="line">&nbsp;</div></div>
+					<p class="leaderText">Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
+					<p><a class="btnBubble css3pie" href="#"><span class="label">Enquire now</span></a></p>
+				</div>
+				
+				<!-- ABOUT -->
+				<div class="about acenter">
+					<img src="___samples/ph-450x250.gif" class="imgThumb" width="450" height="250" border="0" alt="" />
+					<h2>About the Convent Community Room</h2>
+					<p>Three large tables down the centre. Furnished with wooden chairs with cushions. Ample space for small or large groups to meet. Suitable as work space for craft etc. Suitable for lecture-type gatherings, and small group discussion.</p>
+				</div>
+				
+				<!-- SPECS -->
+				<div class="specs">
+					<h3 class="tableHeader compact">
+						<span class="padder clearfix">
+							<span class="label">Specifications</span>
+						</span>
+					</h3>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="styledTable compact">
+						<tr>
+							<td><b>Cost</b> (per hour)</td>
+							<td class="aright"><b>$50</b> (Minimum charge $150)</td>
+						</tr>
+						<tr>
+							<td><b>Size</b></td>
+							<td class="aright"><b>40x50ft</b></td>
+						</tr>
+						<tr>
+							<td><b>Capacity</b> (adults)</td>
+							<td class="aright"><b>Up to 90 people</b></td>
+						</tr>
+					</table>
+				</div>				
+			</div><!-- /FACILITY 2 -->
+			
+		</div>
+	</div><!--/ROOMS1 -->
+	
+	<!-- ROOMS2 -->
+	<div id="rooms2" class="block blockLight">
+		<div class="bgLine bgLineBtm"></div>
+		<div class="padder clearfix">
+			
+			<!-- FACILITY 3 -->
+			<div class="facility contentViewport">
+				<!-- INTRO -->
+				<div class="intro acenter">
+					<h1><span class="leaderText">The Convent</span> Refectory</h1>
+					<div class="divider dividerDiamond"><div class="line">&nbsp;</div></div>
+					<p class="leaderText">Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
+					<p><a class="btnBubble css3pie" href="#"><span class="label">Enquire now</span></a></p>
+				</div>
+				
+				<!-- ABOUT -->
+				<div class="about acenter">
+					<img src="___samples/ph-450x250.gif" class="imgThumb" width="450" height="250" border="0" alt="" />
+					<h2>About the Convent Refectory</h2>
+					<p>Vinyl-covered floor, incandescent lighting. Furnished with several long narrow tables, laminex-top. Vinyl-covered chairs. Suitable as work space for craft etc. Suitable for lecture-type gathering and small group discussion. Able to function as two separate or one single room.</p>
+				</div>
+				
+				<!-- SPECS -->
+				<div class="specs">
+					<h3 class="tableHeader compact">
+						<span class="padder clearfix">
+							<span class="label">Specifications</span>
+						</span>
+					</h3>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="styledTable compact">
+						<tr>
+							<td><b>Cost</b> (per hour)</td>
+							<td class="aright"><b>$50</b> (Minimum charge $150)</td>
+						</tr>
+						<tr>
+							<td><b>Size</b></td>
+							<td class="aright"><b>40x50ft</b></td>
+						</tr>
+						<tr>
+							<td><b>Capacity</b> (adults)</td>
+							<td class="aright"><b>Up to 90 people</b></td>
+						</tr>
+					</table>
+				</div>				
+			</div><!-- /FACILITY 3 -->
+			
+			<!-- FACILITY 4 -->
+			<div class="facility facilityAlt contentViewport">
+				<!-- INTRO -->
+				<div class="intro acenter">
+					<h1><span class="leaderText">The Convent</span> Old Kitchen</h1>
+					<div class="divider dividerDiamond"><div class="line">&nbsp;</div></div>
+					<p class="leaderText">Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere.</p>
+					<p><a class="btnBubble css3pie" href="#"><span class="label">Enquire now</span></a></p>
+				</div>
+				
+				<!-- ABOUT -->
+				<div class="about acenter">
+					<img src="___samples/ph-450x250.gif" class="imgThumb" width="450" height="250" border="0" alt="" />
+					<h2>About the Old Kitchen</h2>
+					<p>The Old Kitchen is a large irregular space with tiled floor and moveable laminex topped tables, there is also a kitchenette with fridge and stove. This area would be suitable for art/craft actities. Price negotiable.</p>
+				</div>
+				
+				<!-- SPECS -->
+				<div class="specs">
+					<h3 class="tableHeader compact">
+						<span class="padder clearfix">
+							<span class="label">Specifications</span>
+						</span>
+					</h3>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="styledTable compact">
+						<tr>
+							<td><b>Cost</b> (per hour)</td>
+							<td class="aright"><b>$50</b> (Minimum charge $150)</td>
+						</tr>
+						<tr>
+							<td><b>Size</b></td>
+							<td class="aright"><b>40x50ft</b></td>
+						</tr>
+						<tr>
+							<td><b>Capacity</b> (adults)</td>
+							<td class="aright"><b>Up to 90 people</b></td>
+						</tr>
+					</table>
+				</div>				
+			</div><!-- /FACILITY 4 -->
+			
+		</div>
+	</div><!--/ROOMS2 -->
+		
+	<!-- ENQUIRY -->
+	<div id="enquiry" class="block blockDark">
+		<div class="padder">
+			<div class="frame clearfix">
+			
+				<!-- ASIDE -->
+				<div class="aside">
+					<div class="contentViewport">
+						<h1><span class="leaderText">Make a facility</span> Enquiry</h1>
+						<div class="divider dividerDiamond"><div class="line">&nbsp;</div></div>
+						<p>Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci.</p>
+						<p>Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi.</p>
+					</div>
+				</div><!-- /ASIDE -->
+				
+				<!-- MAIN -->
+				<div class="main">
+				
+					<!-- COLFULL -->
+					<div class="col colFull">
+						
+						<!-- FORM -->
+						<form id="enquiryForm" class="formView clearfix" action="">
+						
+							<h2>Personal Details</h2>
+							<fieldset class="col2 fleft cleft">
+								<label for="fmFirstName">First Name*</label>
+								<input class="text" type="text" id="fmFirstName" name="firstName" />
+							</fieldset>
+							<fieldset class="col2 fright cright">
+								<label for="fmSurname">Surname</label>
+								<input class="text" type="text" id="fmSurname" name="surname" />
+							</fieldset>
+							<fieldset class="col2 fleft cleft">
+								<label for="fmPhone">Phone*</label>
+								<input class="text" type="text" id="fmPhone" name="phone" />
+							</fieldset>
+							<fieldset class="col2 fright cright padBtm20">
+								<label for="fmEmail">Email</label>
+								<input class="text" type="text" id="fmEmail" name="email" />
+							</fieldset>
+							<div class="padBtm20 clearer"></div>
+							
+							<h2>Facility Details</h2>
+							<h3>Room selection*</h3>
+							<fieldset class="col2 fleft cleft">
+								<input class="radio styled" type="radio" id="fmFacility1" name="facility" value="1"/>
+								<label class="inline" for="fmFacility1">Convent Reception Room</label>
+							</fieldset>
+							<fieldset class="col2 fright cright">
+								<input class="radio styled" type="radio" id="fmFacility2" name="facility" value="2"/>
+								<label class="inline" for="fmFacility2">Convent Refectory</label>
+							</fieldset>
+							<fieldset class="col2 fleft cleft">
+								<input class="radio styled" type="radio" id="fmFacility3" name="facility" value="3"/>
+								<label class="inline" for="fmFacility3">Convent Community Room</label>
+							</fieldset>
+							<fieldset class="col2 fright cright">
+								<input class="radio styled" type="radio" id="fmFacility4" name="facility" value="4"/>
+								<label class="inline" for="fmFacility4">Convent Old Kitchen</label>
+							</fieldset>
+							<div class="padBtm20 clearer"></div>
+							
+							<fieldset class="strip clearfix mgnTop30">
+								<label for="fmDate">Select your preferred date*</label>
+								<input class="text datepicker" type="text" id="fmDate" name="date" />
+								<a href="#" class="btnDatepicker"><i class="icon icon-calendar"></i></a>
+							</fieldset>
+							<fieldset class="strip clearfix">
+								<label for="fmArriveTime">Arrival time*</label>
+								<select class="selectBox" id="fmArriveTime" name="arriveTime">
+									<option value="1">08:00am</option>
+									<option value="2">10:00am</option>
+									<option value="3">12:00pm</option>
+									<option value="4">14:00pm</option>
+									<option value="5">16:00pm</option>
+								</select>
+							</fieldset>
+							<fieldset class="strip clearfix">
+								<label for="fmDepartureTime">Departure time*</label>
+								<select class="selectBox" id="fmDepartureTime" name="departureTime">
+									<option value="1">10:00am</option>
+									<option value="2">12:00pm</option>
+									<option value="3">14:00pm</option>
+									<option value="4">16:00pm</option>
+									<option value="5">18:00pm</option>
+								</select>
+							</fieldset>
+							<fieldset class="strip clearfix mgnTop30">
+								<label for="fmGuests">Number of guests expected</label>
+								<input class="text" type="text" id="fmGuests" name="guests" />
+							</fieldset>
+							<fieldset class="mgnTop30">
+								<label for="fmNotes">Add any further requests or queries here</label>
+								<textarea id="fmNotes" name="notes" rows="5" cols="60"></textarea>
+							</fieldset>
+							
+							<p class="ins ">*Required</p>
+							<a class="btnBubble css3pie" id="btnSubmit" href="javascript:$('#enquiryForm').submit();"><span class="label">Submit enquiry</span></a>
+							
+						</form><!-- /FORM -->
+						
+					</div><!-- /COLFULL -->
+				
+				</div><!-- /MAIN -->
+				
+			</div>
+		</div>
+	</div><!--/ENQUIRY -->
+		
+	<!-- FOOTER -->
+	<div id="footer" class="clearfix nfp">		
+				
+		<!-- FOOTERLINKS -->
+		<div id="footerLinks" class="listLinks clearfix"><!--
+			--><span class="first-child">&copy; Sisters of Mercy</span><!--
+			--><span class="sep">|</span><!--
+			--><span><a href="#">Terms of Use</a></span><!--
+			--><span id="btnFW"><a class="ir pngBg" href="http://www.fraynework.com.au" target="_blank"><strong>fraynework</strong>&nbsp;<em>enabled</em></a></span><!--
+		--></div><!-- /FOOTERLINKS -->
+		
+	</div><!-- /FOOTER -->
+
+</div><!-- /CONTAINER -->
+
+</body>
+</html>

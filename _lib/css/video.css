@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* ------------------------------------------------------------------------------ */
+/* common video */
+/* ------------------------------------------------------------------------------ */
+
+/* video container */
+.videoContainer { display:block; position:relative; width:100%; height:auto; margin:0px auto 20px auto!important; padding:0; overflow:hidden; }		
+.videoContainer div:first-child { margin-top:0; }
+
+	/* video player container */
+	.videoContainer .video,
+		.videoContainer .videoHTML5,
+			.videoContainer video,
+		.videoContainer .videoFlash { width:100%!important; height:100%!important; margin:0 auto; padding:0; background-color:#000; overflow:hidden; }
+			
+	/* maintain AR */
+	.videoContainer .videoHTML5 { position:relative; padding-top:56.25% /*360/640*/; }
+	
+	/* fullscreen */
+	.videoContainer .videoHTML5.vjs-fullscreen 		{ padding-top:0; }
+	.videoContainer .videoHTML5:-webkit-full-screen { padding-top:0; }
+	
+	/* poster */
+	.videoContainer .vjs-poster { position:absolute!important; top:0; left:0; }
+	
+	/* no flash */
+	.noflash { color:#aaa; text-align:center; padding:0!important; }
+	.noflash a,
+	.noflash a:hover,
+	.noflash a:focus { color:#ccc; text-decoration:underline; }
+	
+
+/* ------------------------------------------------------------------------------ */
+/* popup video */
+/* ------------------------------------------------------------------------------ */
+
+/* popup video container */
+.videoContainerPopup { 
+	display:block; position:absolute; top:0; left:0; width:100%; height:auto; margin:0 auto; padding:0; overflow:visible; z-index:2000; }
+
+	/* videoBg */
+	.videoContainerPopup .videoBg { 
+		display:block; position:relative; width:auto; height:auto; margin:0 auto; padding:0; overflow:visible; }
+		
+		/* video player container*/
+		.videoContainerPopup .video { 
+			height:auto; margin:0 auto; padding:0; 
+			background-color:#000; border:5px solid #000;
+			/*box-shadow*/-webkit-box-shadow:0px 0px 10px 0px rgba(0,0,0,0.5); box-shadow:0px 0px 10px 0px rgba(0,0,0,0.5); }
+			
+/* custom dimensions 
+.videoContainerPopup.videoContainer640360 .video	{ width:640px; height:360px; }
+.videoContainerPopup.videoContainer640400 .video	{ width:640px; height:400px; }
+*/
